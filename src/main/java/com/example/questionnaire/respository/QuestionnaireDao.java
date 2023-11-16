@@ -1,5 +1,6 @@
 package com.example.questionnaire.respository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,5 +17,7 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 	public Questionnaire findTopByOrderByIdDesc();
 	
 	public List<Questionnaire> findByIdIn(List<Integer> idList);
-	
-}
+
+	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDataLessThanEqual(String title,LocalDate startDate,LocalDate endDate);
+
+}//

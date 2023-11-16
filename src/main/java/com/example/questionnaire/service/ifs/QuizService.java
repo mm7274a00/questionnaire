@@ -13,5 +13,5 @@ public interface QuizService {
 	
 	public QuizRes deleteQuestionnaire(List<Integer>qnIdList);
 	
-	public QuizRes deleteQuestion(int quId,List<Integer>quIdList);	//刪除同一張問卷的 一個 或 多個題目
+	public QuizRes deleteQuestion(int qnId,List<Integer>quIdList);	//刪除同一張問卷的 一個 或 多個題目
 }

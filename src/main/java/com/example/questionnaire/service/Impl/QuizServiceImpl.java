@@ -25,7 +25,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Autowired 
 	private QuestionnaireDao qnDao;
-	
+
 	@Autowired 
 	private QuestionDao quDao;
 	
@@ -43,7 +43,7 @@ public class QuizServiceImpl implements QuizService{
 		}
 		int quId = qnDao.findTopByOrderByIdDesc().getId();
 		for(Question qu : quList) {
-			qu.setId(quId);
+			qu.setQuid(quId);;
 		}
 		quDao.saveAll(quList);
 		return new QuizRes(RtnCode.SUCCESSFUL);
@@ -83,7 +83,7 @@ public class QuizServiceImpl implements QuizService{
 		}
 		List<Question> quList = req.getQuestionList();
 		for(Question qu:quList) {
-		if(qu.getId() <= 0 || !StringUtils.hasText(qu.getqTitle())
+		if(qu.getQuId() <= 0 || !StringUtils.hasText(qu.getqTitle())
 				|| !StringUtils.hasText(qu.getOptionType())||!StringUtils.hasText(qu.getOption()) ) {
 				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 			}
@@ -103,7 +103,7 @@ public class QuizServiceImpl implements QuizService{
 	}return null;
 	}
 		
-	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {
+	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//刪除多筆資料
 		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
 		List<Integer> idList = new ArrayList<>();
 		for(Questionnaire qn:qnList) {
@@ -114,25 +114,22 @@ public class QuizServiceImpl implements QuizService{
 		}
 		if(!idList.isEmpty()) {	//檢查內容是否為空，如是空的則不用刪除
 			qnDao.deleteAllById(idList);	//刪除"問卷"
-			quDao.deleteAllByQnId(idList);	//刪除問卷內的"題目"
+			quDao.deleteAllByQnIdIn(idList);	//刪除問卷內的"題目"
 		}
 		return new QuizRes(RtnCode.SUCCESSFUL);
 	}
 	
-	public QuizRes deleteQuestion(int quId,List<Integer>quIdList){
-		List<Question> quList = quDao.findByIdIn(quIdList);
-		List<Integer> idList = new ArrayList<>();
-		for(Question qu:quList) {
-			if(!qu.isPublished() || qu.isPublished() && LocalDate.now().isBefore(qu.getStartDate())) {
-//				qnDao.deleteById(qn.getId());
-				idList.add(qu.getId());
-			}
+	public QuizRes deleteQuestion(int qnId,List<Integer>quIdList){
+		Optional<Questionnaire>qnOp = qnDao.findById(qnId);
+		if(!qnOp.isEmpty()) {	
+			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
-		if(!idList.isEmpty()) {	
-			qnDao.deleteAllById(idList);
-			quDao.deleteAllByQnId(idList);
+		Questionnaire qn = qnOp.get();
+			if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
+				quDao.deleteAllByQnIdIn(quIdList);
 		}
 		return new QuizRes(RtnCode.SUCCESSFUL);
+
 	}
 	
 	}//

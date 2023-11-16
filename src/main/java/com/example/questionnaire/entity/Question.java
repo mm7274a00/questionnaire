@@ -15,7 +15,7 @@ public class Question {
 	
 	@Id
 	@Column(name = "id")
-	private int id;
+	private int quId;
 	
 	@Column(name = "qn_id")
 	private int qnId;
@@ -36,9 +36,9 @@ public class Question {
 		super();
 	}
 
-	public Question(int id, int qnId, String qTitle, String optionType, String necessary, String option) {
+	public Question(int quId, int qnId, String qTitle, String optionType, String necessary, String option) {
 		super();
-		this.id = id;
+		this.quId = quId;
 		this.qnId = qnId;
 		this.qTitle = qTitle;
 		this.optionType = optionType;
@@ -46,12 +46,12 @@ public class Question {
 		this.option = option;
 	}
 
-	public int getId() {
-		return id;
+	public int getQuId() {
+		return quId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setQuid(int quId) {
+		this.quId = quId;
 	}
 
 	public int getQnId() {
