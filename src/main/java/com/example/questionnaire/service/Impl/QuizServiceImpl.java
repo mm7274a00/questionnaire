@@ -1,6 +1,7 @@
 package com.example.questionnaire.service.Impl;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,10 +28,10 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Autowired 
 	private QuestionDao quDao;
-
+	
 	@Transactional
 	@Override
-	public QuizRes create(QuizReq req) {
+	public QuizRes create(QuizReq req) {	//建立問卷
 		QuizRes checkResult = checkParam(req);
 		if(checkResult != null) {
 			return checkResult;
@@ -44,21 +45,21 @@ public class QuizServiceImpl implements QuizService{
 		for(Question qu : quList) {
 			qu.setId(quId);
 		}
-		quDao.saveAll(quList){
-			qu.setQnId(quId);
+		quDao.saveAll(quList);
+		return new QuizRes(RtnCode.SUCCESSFUL);
 		}
 		
-		@Override
-		public QuizRes update(QuizReq req) {
-		QuizRes checkResult = checkParam(req);
-		if(checkResult != null){
+	@Override
+	public QuizRes update(QuizReq req) {	//更新、修改問券
+			QuizRes checkResult = checkParam(req);
+			if(checkResult != null){
 			return checkResult;
 		}
 		checkResult = checkQuestionnaireId(req);
-		if(checkResult != null);{
+		if(checkResult != null){
 			return checkResult;
 		}
-		Optional<Questionnaire>qnOp = qnDao.findById(req.getQuestionnaire().getid());
+		Optional<Questionnaire> qnOp = qnDao.findById(req.getQuestionnaire().getId());
 		if(qnOp.isEmpty()) {
 			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_NOT_FOUND);
 		}
@@ -91,7 +92,7 @@ public class QuizServiceImpl implements QuizService{
 	}
 	
 	private QuizRes checkQuestionnaireId(QuizReq req){
-		if(req.getQuestionnaire.getId() <= 0 ) {
+		if(req.getQuestionnaire().getId() <= 0 ) {
 			return new QuizRes(RtnCode.QUESTIONNAIRE_PARAM_ERROR);
 		}
 		List<Question> quList = req.getQuestionList();
@@ -102,4 +103,36 @@ public class QuizServiceImpl implements QuizService{
 	}return null;
 	}
 		
-}//
+	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {
+		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
+		List<Integer> idList = new ArrayList<>();
+		for(Questionnaire qn:qnList) {
+			if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
+//				qnDao.deleteById(qn.getId());
+				idList.add(qn.getId());
+			}
+		}
+		if(!idList.isEmpty()) {	//檢查內容是否為空，如是空的則不用刪除
+			qnDao.deleteAllById(idList);	//刪除"問卷"
+			quDao.deleteAllByQnId(idList);	//刪除問卷內的"題目"
+		}
+		return new QuizRes(RtnCode.SUCCESSFUL);
+	}
+	
+	public QuizRes deleteQuestion(int quId,List<Integer>quIdList){
+		List<Question> quList = quDao.findByIdIn(quIdList);
+		List<Integer> idList = new ArrayList<>();
+		for(Question qu:quList) {
+			if(!qu.isPublished() || qu.isPublished() && LocalDate.now().isBefore(qu.getStartDate())) {
+//				qnDao.deleteById(qn.getId());
+				idList.add(qu.getId());
+			}
+		}
+		if(!idList.isEmpty()) {	
+			qnDao.deleteAllById(idList);
+			quDao.deleteAllByQnId(idList);
+		}
+		return new QuizRes(RtnCode.SUCCESSFUL);
+	}
+	
+	}//

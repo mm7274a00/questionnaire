@@ -2,7 +2,6 @@ package com.example.questionnaire.vo;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
 
@@ -12,8 +11,6 @@ public class QuizReq {
 	
 	private List<Question> questionList = new ArrayList<>(); //給予預設值為空，減少判斷式
 
-	public Object getQuestionnaire;
-
 	public QuizReq() {
 		super();
 	}
@@ -22,6 +19,10 @@ public class QuizReq {
 		super();
 		this.questionnaire = questionnaire;
 		this.questionList = questionList;
+	}
+
+	public Questionnaire getQuestionnaire() {
+		return questionnaire;
 	}
 
 	public void setQuestionnaire(Questionnaire questionnaire) {
@@ -35,15 +36,5 @@ public class QuizReq {
 	public void setQuestionList(List<Question> questionList) {
 		this.questionList = questionList;
 	}
-
-	public Question getQuestion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Questionnaire getQuestionnaire() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }

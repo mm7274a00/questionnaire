@@ -1,5 +1,7 @@
 package com.example.questionnaire.entity;
 
+import java.time.chrono.ChronoLocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -34,13 +36,13 @@ public class Question {
 		super();
 	}
 
-	public Question(int id, int qnId, String qTitle, String optionType, String isNecessary, String option) {
+	public Question(int id, int qnId, String qTitle, String optionType, String necessary, String option) {
 		super();
 		this.id = id;
 		this.qnId = qnId;
 		this.qTitle = qTitle;
 		this.optionType = optionType;
-		this.necessary = isNecessary;
+		this.necessary = necessary;
 		this.option = option;
 	}
 
@@ -90,6 +92,16 @@ public class Question {
 
 	public void setOption(String option) {
 		this.option = option;
+	}
+
+	public boolean isPublished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public ChronoLocalDate getStartDate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
