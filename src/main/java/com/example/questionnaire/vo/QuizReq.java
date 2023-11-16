@@ -2,8 +2,11 @@ package com.example.questionnaire.vo;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.questionnaire.entity.Question;
+
+import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
+
 import com.example.questionnaire.entity.Questionnaire;
+
 
 public class QuizReq {
 	
@@ -36,5 +39,7 @@ public class QuizReq {
 	public void setQuestionList(List<Question> questionList) {
 		this.questionList = questionList;
 	}
+
+
 	
-}
+}//

@@ -5,6 +5,7 @@ import java.util.List;
 import com.example.questionnaire.constants.RtnCode;
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
+import com.example.questionnaire.entity.Quizs;
 
 public class QuizRes {
 	
@@ -12,6 +13,8 @@ public class QuizRes {
 //	
 //	private List<Question> questionList;	//題目
 	//使用組合統整上面兩行
+	private Quizs quizs;
+	
 	private RtnCode rtnCode;
 
 	public QuizRes() {

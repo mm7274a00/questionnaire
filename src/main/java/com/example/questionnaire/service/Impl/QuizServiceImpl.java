@@ -20,6 +20,8 @@ import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 
+
+
 @Service
 public class QuizServiceImpl implements QuizService{
 	
@@ -48,7 +50,8 @@ public class QuizServiceImpl implements QuizService{
 		quDao.saveAll(quList);
 		return new QuizRes(RtnCode.SUCCESSFUL);
 		}
-		
+	
+	@Transactional	
 	@Override
 	public QuizRes update(QuizReq req) {	//更新、修改問券
 			QuizRes checkResult = checkParam(req);
@@ -64,7 +67,8 @@ public class QuizServiceImpl implements QuizService{
 			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_NOT_FOUND);
 		}
 		Questionnaire qn = qnOp.get();
-		//1. is_published == flase，可以修改
+		//可以修改的條件：
+		//1.尚未發布：published == flase，可以修改
 		//2. 已發布但尚未開始進行：is_published == true + 當前時間必須小於 start_date
 		if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
 			qnDao.save(req.getQuestionnaire());
