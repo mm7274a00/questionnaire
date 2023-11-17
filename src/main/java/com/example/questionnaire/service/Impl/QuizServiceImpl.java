@@ -180,15 +180,17 @@ public class QuizServiceImpl implements QuizService{
 
 	@Override
 	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, 
-			boolean isAll) {	//問卷清單
+			boolean isPublished) {	//問卷清單
 		title = StringUtils.hasText(title)? title:"";
 		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
 		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);
-		List<Questionnaire> qnList = new ArrayList<>();
-		if(!isAll) {
-			qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqualAndPublishedTrue(title, startDate, endDate);
-		}else {
-			qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
+		List<Questionnaire> qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
+//		List<Questionnaire> qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
+		List<Questionnaire> newQnList = new ArrayList<>();
+		for(Questionnaire qn:qnList) {
+			if(qn.isPublished() == isPublished) {
+				newQnList.add(qn);
+			}
 		}
 		return new QuestionnaireRes(qnList,RtnCode.SUCCESSFUL);
 	}

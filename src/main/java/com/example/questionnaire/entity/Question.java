@@ -46,6 +46,10 @@ public class Question {
 		this.option = option;
 	}
 
+	public Question(int quId,String string, String string2, boolean b, String string3) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getQuId() {
 		return quId;
 	}

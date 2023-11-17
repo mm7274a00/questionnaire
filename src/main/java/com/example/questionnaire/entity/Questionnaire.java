@@ -37,7 +37,7 @@ public class Questionnaire {
 		super();
 	}
 
-	public Questionnaire(int id, String title, String descrition, boolean isPublished, LocalDate startDate,
+	public Questionnaire(String title, String descrition, boolean isPublished, LocalDate startDate,
 			LocalDate endDate) {
 		super();
 		this.id = id;
