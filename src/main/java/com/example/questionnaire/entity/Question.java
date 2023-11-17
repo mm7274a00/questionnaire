@@ -29,7 +29,7 @@ public class Question {
 	@Column(name = "is_necessary")
 	private String necessary;
 	
-	@Column(name = "option")
+	@Column(name = "q_option")
 	private String option;
 
 	public Question() {

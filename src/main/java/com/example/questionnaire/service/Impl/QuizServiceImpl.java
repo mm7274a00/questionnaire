@@ -2,6 +2,7 @@ package com.example.questionnaire.service.Impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,8 @@ import com.example.questionnaire.entity.Questionnaire;
 import com.example.questionnaire.respository.QuestionDao;
 import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
+import com.example.questionnaire.vo.QuestionRes;
+import com.example.questionnaire.vo.QuestionnaireRes;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizVo;
@@ -42,8 +45,8 @@ public class QuizServiceImpl implements QuizService{
 		if(quList.isEmpty()) {
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
-		int quId = qnDao.save(getQuestionnaire()).getId();
-//		int quId = qnDao.findTopByOrderByIdDesc().getId();
+//		int quId = qnDao.save(getQuestionnaire()).getId();
+		int quId = qnDao.findTopByOrderByIdDesc().getId();
 		for(Question qu : quList) {
 			qu.setQuId(quId);
 		}
@@ -173,6 +176,30 @@ public class QuizServiceImpl implements QuizService{
 			quizVoList.add(vo);
 		}
 		return new QuizRes(quizVoList,RtnCode.SUCCESSFUL);
+	}
+
+	@Override
+	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, 
+			boolean isAll) {	//°Ý¨÷²M³æ
+		title = StringUtils.hasText(title)? title:"";
+		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
+		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);
+		List<Questionnaire> qnList = new ArrayList<>();
+		if(!isAll) {
+			qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqualAndPublishedTrue(title, startDate, endDate);
+		}else {
+			qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
+		}
+		return new QuestionnaireRes(qnList,RtnCode.SUCCESSFUL);
+	}
+
+	@Override
+	public QuestionRes searchQuestionList(int qnId) {
+		if(qnId <= 0) {
+			return new QuestionRes(null,RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+		}
+		List<Question> quList = quDao.findAllByQnIdIn(Arrays.asList(qnId));
+		return new QuestionRes(quList,RtnCode.SUCCESSFUL);
 	}
 	
 	}//

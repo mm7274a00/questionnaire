@@ -17,4 +17,7 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 
 	public Questionnaire findTopByOrderByIdDesc();
 
+	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqualAndPublishedTrue(String title,
+			LocalDate startDate, LocalDate endDate);
+
 }//
