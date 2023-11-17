@@ -19,6 +19,7 @@ import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
+import com.example.questionnaire.vo.QuizVo;
 
 
 
@@ -38,12 +39,11 @@ public class QuizServiceImpl implements QuizService{
 		if(checkResult != null) {
 			return checkResult;
 		}
-		qnDao.save(req.getQuestionnaire());
+		int quId = qnDao.getQuestionList().getId();
 		List<Question> quList = req.getQuestionList();
 		if(quList.isEmpty()) {
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
-		int quId = qnDao.findTopByOrderByIdDesc().getId();
 		for(Question qu : quList) {
 			qu.setQuid(quId);;
 		}
@@ -134,6 +134,20 @@ public class QuizServiceImpl implements QuizService{
 		}
 		return new QuizRes(RtnCode.SUCCESSFUL);
 
+	}
+
+	@Override
+	public QuizRes serach(String title, LocalDate startDate, LocalDate endDate) {
+		if(StringUtils.hasText(title)) {
+			title = "";	//如未輸入標題關鍵字，則為空字串，才能撈得出所有資料
+		}
+		if(startDate == null) {
+			startDate = LocalDate.of(1971, 1,1);	//如未輸入時間，則給一個超早開始時間
+		}
+		if(endDate == null) {
+			endDate = LocalDate.of(2099, 12,31);	//如未輸入時間，則給一個超晚結束時間
+		}
+		return null;
 	}
 	
 	}//
