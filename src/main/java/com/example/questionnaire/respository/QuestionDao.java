@@ -12,10 +12,13 @@ import com.example.questionnaire.entity.QuestionId;
 public interface QuestionDao extends JpaRepository<Question, QuestionId>{
 
 	public void deleteAllByQnIdIn(List<Integer> qnIdList);
+	
+	public void deleteAllByQnIdAndQuIdIn(int qnId, List<Integer> quIdList);
 
-//	public List<Question> findByQuIdInAndQnId(List<Integer> quIdList);
 	public List<Question> findByQuIdInAndQnId(List<Integer> idList,int qnId);
 
-	public void saveAll(List<org.aspectj.weaver.patterns.TypePatternQuestions.Question> questionList);
+	public List<Question> findAllByQnIdIn(List<Integer> qnIdList);
+
+
 	
 }

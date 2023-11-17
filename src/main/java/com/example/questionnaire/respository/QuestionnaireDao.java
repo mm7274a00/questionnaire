@@ -13,8 +13,8 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 	
 	public List<Questionnaire> findByIdIn(List<Integer> idList);
 
-	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDataLessThanEqual(String title,LocalDate startDate,LocalDate endDate);
+	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(String title,LocalDate startDate,LocalDate endDate);
 
-	public Questionnaire getQuestionList();
+	public Questionnaire findTopByOrderByIdDesc();
 
 }//

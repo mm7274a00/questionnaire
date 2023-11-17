@@ -21,8 +21,6 @@ import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizVo;
 
-
-
 @Service
 public class QuizServiceImpl implements QuizService{
 	
@@ -39,13 +37,15 @@ public class QuizServiceImpl implements QuizService{
 		if(checkResult != null) {
 			return checkResult;
 		}
-		int quId = qnDao.getQuestionList().getId();
+		qnDao.save(req.getQuestionnaire());
 		List<Question> quList = req.getQuestionList();
 		if(quList.isEmpty()) {
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
+		int quId = qnDao.save(getQuestionnaire()).getId();
+//		int quId = qnDao.findTopByOrderByIdDesc().getId();
 		for(Question qu : quList) {
-			qu.setQuid(quId);;
+			qu.setQuId(quId);
 		}
 		quDao.saveAll(quList);
 		return new QuizRes(RtnCode.SUCCESSFUL);
@@ -78,7 +78,7 @@ public class QuizServiceImpl implements QuizService{
 		return new QuizRes(RtnCode.UPDATE_ERROR);
 	}
 
-	public QuizRes checkParam(QuizReq req) {
+	private QuizRes checkParam(QuizReq req) {
 		Questionnaire qn = req.getQuestionnaire();
 		if(StringUtils.hasText(qn.getTitle())||StringUtils.hasText(qn.getDescrition())
 				|| qn.getStartDate() == null || qn.getEndDate() == null
@@ -106,7 +106,8 @@ public class QuizServiceImpl implements QuizService{
 		}
 	}return null;
 	}
-		
+	
+	@Override	
 	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//刪除多筆資料
 		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
 		List<Integer> idList = new ArrayList<>();
@@ -123,31 +124,55 @@ public class QuizServiceImpl implements QuizService{
 		return new QuizRes(RtnCode.SUCCESSFUL);
 	}
 	
+	@Override
 	public QuizRes deleteQuestion(int qnId,List<Integer>quIdList){
+		//							1.				1,2,3
 		Optional<Questionnaire>qnOp = qnDao.findById(qnId);
-		if(!qnOp.isEmpty()) {	
+		if(qnOp.isEmpty()) {	
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
 		Questionnaire qn = qnOp.get();
 			if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
-				quDao.deleteAllByQnIdIn(quIdList);
+				quDao.deleteAllByQnIdAndQuIdIn(qnId,quIdList);
 		}
 		return new QuizRes(RtnCode.SUCCESSFUL);
 
 	}
 
 	@Override
-	public QuizRes serach(String title, LocalDate startDate, LocalDate endDate) {
-		if(StringUtils.hasText(title)) {
-			title = "";	//如未輸入標題關鍵字，則為空字串，才能撈得出所有資料
+	public QuizRes search(String title, LocalDate startDate, LocalDate endDate) {
+		title = StringUtils.hasText(title)? title:"";	//三元式寫法：問號的左邊為判斷式，如有內容則回傳標題，無內容標題等於空字串
+		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
+		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);	//此三行等於以下寫法
+//		if(StringUtils.hasText(title)) {
+//			title = "";	//如未輸入標題關鍵字，則為空字串，才能撈得出所有資料
+//		}
+//		if(startDate == null) {
+//			startDate = LocalDate.of(1971, 1,1);	//如未輸入時間，則給一個超早開始時間
+//		}
+//		if(endDate == null) {
+//			endDate = LocalDate.of(2099, 12,31);	//如未輸入時間，則給一個超晚結束時間
+//		}
+		List<Questionnaire> qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
+		List<Integer> qnIds = new ArrayList<>();
+		for(Questionnaire qu: qnList) {
+			qnIds.add(qu.getId());
 		}
-		if(startDate == null) {
-			startDate = LocalDate.of(1971, 1,1);	//如未輸入時間，則給一個超早開始時間
+		List<Question> quList = quDao.findAllByQnIdIn(qnIds);
+		List<QuizVo> quizVoList = new ArrayList<>();
+		for(Questionnaire qn : qnList) {
+			QuizVo vo = new QuizVo();
+			vo.setQuestionnaire(qn);
+			List<Question> questionList = new ArrayList<>();
+			for(Question qu:quList) {
+				if(qu.getQnId() == qn.getId()) {
+					questionList.add(qu);
+				}
+			}
+			vo.setQuestionList(questionList);
+			quizVoList.add(vo);
 		}
-		if(endDate == null) {
-			endDate = LocalDate.of(2099, 12,31);	//如未輸入時間，則給一個超晚結束時間
-		}
-		return null;
+		return new QuizRes(quizVoList,RtnCode.SUCCESSFUL);
 	}
 	
 	}//

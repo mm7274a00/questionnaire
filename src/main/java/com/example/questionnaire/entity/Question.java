@@ -50,7 +50,7 @@ public class Question {
 		return quId;
 	}
 
-	public void setQuid(int quId) {
+	public void setQuId(int quId) {
 		this.quId = quId;
 	}
 
@@ -99,9 +99,9 @@ public class Question {
 		return false;
 	}
 
-	public ChronoLocalDate getStartDate() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public ChronoLocalDate getStartDate() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }
