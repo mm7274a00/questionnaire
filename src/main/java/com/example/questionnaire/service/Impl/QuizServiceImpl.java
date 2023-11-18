@@ -83,7 +83,7 @@ public class QuizServiceImpl implements QuizService{
 
 	private QuizRes checkParam(QuizReq req) {
 		Questionnaire qn = req.getQuestionnaire();
-		if(StringUtils.hasText(qn.getTitle())||StringUtils.hasText(qn.getDescrition())
+		if(!StringUtils.hasText(qn.getTitle())||!StringUtils.hasText(qn.getDescription())
 				|| qn.getStartDate() == null || qn.getEndDate() == null
 				|| qn.getStartDate().isAfter(qn.getEndDate())){
 			return new QuizRes(RtnCode.QUESTIONNAIRE_PARAM_ERROR);
