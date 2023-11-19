@@ -35,13 +35,11 @@ public class QuizServiceTest {
 		
 		QuizReq req = new QuizReq(questionnaire,questionList);
 		QuizRes res = service.create(req);
+		
 		System.out.println("Returned RtnCode: " + res.getRtnCode().getCode());
 		System.out.println("Returned Message: " + res.getRtnCode().getMessage());
-		System.out.println("Questionnaire: " + questionnaire);
-		System.out.println("Question List: " + questionList);
-		System.out.println("Questionnaire: " + req.getQuestionnaire());
-		System.out.println("Question List: " + req.getQuestionList());
-		System.out.println("Received QuizReq: " + req);
+		System.out.println("Questionnaire: " + req.getQuestionnaire().getId());
+		System.out.println("Question List: " + req.getQuestionList().get(0));
 		Assert.isTrue(res.getRtnCode().getCode() == 200, "create error!");
 	}
 }//
