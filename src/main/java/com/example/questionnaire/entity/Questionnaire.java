@@ -21,8 +21,8 @@ public class Questionnaire {
 	@Column(name = "title")
 	private String title;
 	
-	@Column(name = "descrition")
-	private String descrition;
+	@Column(name = "description")
+	private String description;
 	
 	@Column(name = "is_published")
 	private boolean isPublished;
@@ -37,15 +37,25 @@ public class Questionnaire {
 		super();
 	}
 
-	public Questionnaire(String title, String descrition, boolean isPublished, LocalDate startDate,
+	public Questionnaire(int id, String title, String description, boolean isPublished, LocalDate startDate,
 			LocalDate endDate) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.descrition = descrition;
+		this.description = description;
 		this.isPublished = isPublished;
 		this.startDate = startDate;
 		this.endDate = endDate;
+	}
+
+	public Questionnaire(String title, String description, boolean isPublished, LocalDate startDate, LocalDate endDate) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.isPublished = isPublished;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		
 	}
 
 	public int getId() {
@@ -64,12 +74,12 @@ public class Questionnaire {
 		this.title = title;
 	}
 
-	public String getDescrition() {
-		return descrition;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescrition(String descrition) {
-		this.descrition = descrition;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public boolean isPublished() {
@@ -95,6 +105,5 @@ public class Questionnaire {
 	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
-	
-	
+
 }
