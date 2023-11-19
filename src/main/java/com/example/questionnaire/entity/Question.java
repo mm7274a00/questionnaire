@@ -46,8 +46,13 @@ public class Question {
 		this.option = option;
 	}
 
-	public Question(int quId,String string, String string2, boolean b, String string3) {
+	public Question(int qnId,String qTitle, String optionType, boolean isPublished, String option) {
 		// TODO Auto-generated constructor stub
+		super();
+		this.qnId = qnId;
+		this.qTitle = qTitle;
+		this.optionType = optionType;
+		this.option = option;
 	}
 
 	public int getQuId() {
