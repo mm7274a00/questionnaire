@@ -40,15 +40,14 @@ public class QuizServiceImpl implements QuizService{
 		if(checkResult != null) {
 			return checkResult;
 		}
-		qnDao.save(req.getQuestionnaire());
+		int quId = qnDao.save(req.getQuestionnaire()).getId();
 		List<Question> quList = req.getQuestionList();
 		if(quList.isEmpty()) {
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
-//		int quId = qnDao.save(getQuestionnaire()).getId();
-		int quId = qnDao.findTopByOrderByIdDesc().getId();
+//		int quId = qnDao.findTopByOrderByIdDesc().getId();
 		for(Question qu : quList) {
-			qu.setQuId(quId);
+			qu.setQnId(quId);
 		}
 		quDao.saveAll(quList);
 		return new QuizRes(RtnCode.SUCCESSFUL);
@@ -69,6 +68,11 @@ public class QuizServiceImpl implements QuizService{
 		if(qnOp.isEmpty()) {
 			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_NOT_FOUND);
 		}
+		//collect delected_question_id
+		List<Integer> deletedQuIdList = new ArrayList<>();
+		for(Question qu : req.getDeleteQuestionList()) {
+			deletedQuIdList.add(qu.getQuId());
+		}
 		Questionnaire qn = qnOp.get();
 		//可以修改的條件：
 		//1.尚未發布：published == flase，可以修改
@@ -76,6 +80,9 @@ public class QuizServiceImpl implements QuizService{
 		if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
 			qnDao.save(req.getQuestionnaire());
 			quDao.saveAll(req.getQuestionList());
+			if(!deletedQuIdList.isEmpty()) {
+				quDao.deleteAllByQnIdAndQuIdIn(qn.getId(),deletedQuIdList);
+			}
 			return new QuizRes(RtnCode.SUCCESSFUL);
 		}
 		return new QuizRes(RtnCode.UPDATE_ERROR);
@@ -90,7 +97,7 @@ public class QuizServiceImpl implements QuizService{
 		}
 		List<Question> quList = req.getQuestionList();
 		for(Question qu:quList) {
-			if(qu.getQnId() <= 0 || !StringUtils.hasText(qu.getqTitle())
+			if(qu.getQuId() <= 0 || !StringUtils.hasText(qu.getqTitle())
 				|| !StringUtils.hasText(qu.getOptionType())||!StringUtils.hasText(qu.getOption()) ) {
 				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 			}
@@ -100,18 +107,19 @@ public class QuizServiceImpl implements QuizService{
 	
 	private QuizRes checkQuestionnaireId(QuizReq req){
 		if(req.getQuestionnaire().getId() <= 0 ) {
-			return new QuizRes(RtnCode.QUESTIONNAIRE_PARAM_ERROR);
+			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 		}
 		List<Question> quList = req.getQuestionList();
 		for(Question qu: quList) {
-		if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
-			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+			if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
+				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+			}
 		}
-	}
-		List<Question> quDeList = req.getDeleteQuestionList();
-		for(Question qu: quDeList) {
-		if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
-			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+		List<Question> quDelList = req.getDeleteQuestionList();
+		for(Question qu : quDelList) {
+			if(qu.getQnId() != req.getQuestionnaire().getId()) {
+				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+			}
 		}
 		return null;
 	}

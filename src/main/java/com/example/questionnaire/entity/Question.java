@@ -49,7 +49,7 @@ public class Question {
 	public Question(int quId,String qTitle, String optionType, boolean isPublished, String option) {
 		// TODO Auto-generated constructor stub
 		super();
-		this.qnId = quId;
+		this.quId = quId;
 		this.qTitle = qTitle;
 		this.optionType = optionType;
 		this.option = option;

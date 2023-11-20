@@ -1,5 +1,6 @@
 package com.example.questionnaire.vo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.example.questionnaire.entity.Question;
@@ -7,7 +8,7 @@ import com.example.questionnaire.entity.Questionnaire;
 
 public class QuizReq extends QuizVo{
 
-	public List<Question>DeleteQuestionList;
+	private List<Question> deleteQuestionList = new ArrayList<>();
 	
 	public QuizReq() {
 		super();
@@ -19,8 +20,12 @@ public class QuizReq extends QuizVo{
 	}
 
 	public List<Question> getDeleteQuestionList() {
-		// TODO Auto-generated method stub
-		return null;
+		return deleteQuestionList;
 	}
+
+	public void setDeleteQuestionList(List<Question> deleteQuestionList) {
+		this.deleteQuestionList = deleteQuestionList;
+	}
+
 	
 }//
