@@ -7,6 +7,8 @@ import com.example.questionnaire.entity.Questionnaire;
 
 public class QuizReq extends QuizVo{
 
+	public List<Question>DeleteQuestionList;
+	
 	public QuizReq() {
 		super();
 	}
@@ -14,6 +16,11 @@ public class QuizReq extends QuizVo{
 	public QuizReq(Questionnaire questionnaire, List<Question> questionList) {
 		super(questionnaire, questionList);
 
+	}
+
+	public List<Question> getDeleteQuestionList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }//

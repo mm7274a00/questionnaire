@@ -3,6 +3,7 @@ package com.example.questionnaire.controller;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizSearchReq;
 
 @RestController
+@CrossOrigin
 public class QuizController {
 	
 	@Autowired

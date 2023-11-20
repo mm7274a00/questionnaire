@@ -107,7 +107,13 @@ public class QuizServiceImpl implements QuizService{
 		if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
 			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 		}
-	}return null;
+	}
+		List<Question> quDeList = req.getDeleteQuestionList();
+		for(Question qu: quDeList) {
+		if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
+			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+		}
+		return null;
 	}
 	
 	@Override	
