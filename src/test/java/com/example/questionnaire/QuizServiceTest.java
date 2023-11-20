@@ -12,6 +12,7 @@ import org.springframework.util.Assert;
 
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
+import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
@@ -49,24 +50,21 @@ public class QuizServiceTest {
 	
     @Test
     public void updateTest() {
-        // 創建一個問卷對象，這裡的問卷 ID 設為現有的問卷 ID（請確保 ID 是存在的）
-        Questionnaire questionnaire = new Questionnaire("test1", "test", false,
+        Questionnaire questionnaire = new Questionnaire(1,"test1", "test", false,
                 LocalDate.of(2023, 11, 25), LocalDate.of(2023, 11, 30));
-        
-        // 創建問題對象
         List<Question> questionList = new ArrayList<>();
         Question q1 = new Question(1, "test_question_1", "single", false, "AAA;BBB;CCC");
         Question q2 = new Question(2, "test_question_2", "multi", false, "10;20;30;40");
         Question q3 = new Question(3, "test_question_3", "text", false, "AAAA");
         questionList.addAll(Arrays.asList(q1, q2, q3));
         
-        // 將問卷和問題添加到 QuizReq 對象中
         QuizReq req = new QuizReq(questionnaire, questionList);
-        
-        // 呼叫 service 的 update 方法
         QuizRes res = service.update(req);
+		System.out.println("Returned RtnCode: " + res.getRtnCode().getCode());
+		System.out.println("Returned Message: " + res.getRtnCode().getMessage());
         
         // 使用 Assertions 驗證返回結果是否成功
         Assert.isTrue(res.getRtnCode().getCode() == 200, "update error!");
     }
+     
 }//
