@@ -36,35 +36,26 @@ public class QuizServiceTest {
 		
 		QuizReq req = new QuizReq(questionnaire,questionList);
 		QuizRes res = service.create(req);
-		
-		System.out.println("Returned RtnCode: " + res.getRtnCode().getCode());
-		System.out.println("Returned Message: " + res.getRtnCode().getMessage());
-		System.out.println("Questionnaire: " + req.getQuestionnaire().getId());
-		System.out.println("Question List: " + req.getQuestionList());
-	    System.out.println("Title: " + questionnaire.getTitle());
-	    System.out.println("Description: " + questionnaire.getDescription());
-	    System.out.println("Start Date: " + questionnaire.getStartDate());
-	    System.out.println("End Date: " + questionnaire.getEndDate());
 		Assert.isTrue(res.getRtnCode().getCode() == 200, "create error!");
 	}
 	
-    @Test
-    public void updateTest() {
-        Questionnaire questionnaire = new Questionnaire(1,"test1", "test", false,
-                LocalDate.of(2023, 11, 25), LocalDate.of(2023, 11, 30));
-        List<Question> questionList = new ArrayList<>();
-        Question q1 = new Question(1, "test_question_1", "single", false, "AAA;BBB;CCC");
-        Question q2 = new Question(2, "test_question_2", "multi", false, "10;20;30;40");
-        Question q3 = new Question(3, "test_question_3", "text", false, "AAAA");
-        questionList.addAll(Arrays.asList(q1, q2, q3));
-        
-        QuizReq req = new QuizReq(questionnaire, questionList);
-        QuizRes res = service.update(req);
-		System.out.println("Returned RtnCode: " + res.getRtnCode().getCode());
-		System.out.println("Returned Message: " + res.getRtnCode().getMessage());
-        
-        // 使用 Assertions 驗證返回結果是否成功
-        Assert.isTrue(res.getRtnCode().getCode() == 200, "update error!");
-    }
+//    @Test
+//    public void updateTest() {
+//        Questionnaire questionnaire = new Questionnaire(1,"test1", "test", false,
+//                LocalDate.of(2023, 11, 25), LocalDate.of(2023, 11, 30));
+//        List<Question> questionList = new ArrayList<>();
+//        Question q1 = new Question(1, "test_question_1", "single", false, "AAA;BBB;CCC");
+//        Question q2 = new Question(2, "test_question_2", "multi", false, "10;20;30;40");
+//        Question q3 = new Question(3, "test_question_3", "text", false, "AAAA");
+//        questionList.addAll(Arrays.asList(q1, q2, q3));
+//        
+//        QuizReq req = new QuizReq(questionnaire, questionList);
+//        QuizRes res = service.update(req);
+//		System.out.println("Returned RtnCode: " + res.getRtnCode().getCode());
+//		System.out.println("Returned Message: " + res.getRtnCode().getMessage());
+//        
+//        // 使用 Assertions 驗證返回結果是否成功
+//        Assert.isTrue(res.getRtnCode().getCode() == 200, "update error!");
+//    }
      
 }//

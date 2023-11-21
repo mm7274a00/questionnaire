@@ -27,6 +27,15 @@ dependencies {
 	implementation 'mysql:mysql-connector-java:8.0.31'
 	//spring security,使用BcryptPassword建立金鑰 //https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache
+	
+	//Spring Boot Starter Cache
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	
+	// https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine
+	implementation 'com.github.ben-manes.caffeine:caffeine'
+	
+	
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
