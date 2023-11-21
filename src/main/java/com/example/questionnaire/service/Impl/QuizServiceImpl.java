@@ -56,8 +56,8 @@ public class QuizServiceImpl implements QuizService{
 	@Transactional	
 	@Override
 	public QuizRes update(QuizReq req) {	//更新、修改問券
-			QuizRes checkResult = checkParam(req);
-			if(checkResult != null){
+		QuizRes checkResult = checkParam(req);
+		if(checkResult != null){
 			return checkResult;
 		}
 		checkResult = checkQuestionnaireId(req);
@@ -77,7 +77,7 @@ public class QuizServiceImpl implements QuizService{
 		//可以修改的條件：
 		//1.尚未發布：published == flase，可以修改
 		//2. 已發布但尚未開始進行：is_published == true + 當前時間必須小於 start_date
-		if(!qn.isPublished() || qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate())) {
+		if(!qn.isPublished() || (qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate()))) {
 			qnDao.save(req.getQuestionnaire());
 			quDao.saveAll(req.getQuestionList());
 			if(!deletedQuIdList.isEmpty()) {
