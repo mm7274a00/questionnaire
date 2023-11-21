@@ -48,7 +48,7 @@ public class QuizServiceTest {
 		Question q3 = new Question(3,"test_question_3","text",false,"ABC1125");
 		questionList.addAll(Arrays.asList(q1, q2, q3));
 		QuizReq req = new QuizReq(questionnaire,questionList);
-		QuizRes res = service.update(req);
+		QuizRes res = service.create(req);
 		System.out.println(req.getQuestionnaire().getId());
 		System.out.println(res.getRtnCode().getCode());
 		System.out.println(res.getRtnCode().getMessage());
