@@ -1,7 +1,5 @@
 package com.example.questionnaire.entity;
 
-import java.time.chrono.ChronoLocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -108,9 +106,5 @@ public class Question {
 		return false;
 	}
 
-//	public ChronoLocalDate getStartDate() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 }

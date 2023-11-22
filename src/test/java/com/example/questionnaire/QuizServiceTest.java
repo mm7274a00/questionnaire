@@ -42,4 +42,7 @@ public class QuizServiceTest {
     public void updateTest() {
     }
      
+    @Test
+    public void searchTest() {
+    }
 }//
