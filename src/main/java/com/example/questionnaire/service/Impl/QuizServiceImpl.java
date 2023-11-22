@@ -9,6 +9,7 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -105,24 +106,53 @@ public class QuizServiceImpl implements QuizService{
 		return null;
 	}
 	
-	private QuizRes checkQuestionnaireId(QuizReq req){
-		if(req.getQuestionnaire().getId() <= 0 ) {
-			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
-		}
-		List<Question> quList = req.getQuestionList();
-		for(Question qu: quList) {
-			if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
-				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
-			}
-		}
-		List<Question> quDelList = req.getDeleteQuestionList();
-		for(Question qu : quDelList) {
-			if(qu.getQnId() != req.getQuestionnaire().getId()) {
-				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
-			}
-		}
-		return null;
+//	private QuizRes checkQuestionnaireId(QuizReq req){
+//		if(req.getQuestionnaire().getId() <= 0 ) {
+//			return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);	
+//		}
+//		List<Question> quList = req.getQuestionList();
+//		for(Question qu: quList) {
+//			if(qu.getQnId()	!= req.getQuestionnaire().getId()) {
+//				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+//			}
+//		}
+//		List<Question> quDelList = req.getDeleteQuestionList();
+//		for(Question qu : quDelList) {
+//			if(qu.getQnId() != req.getQuestionnaire().getId()) {
+//				return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+//			}
+//		}
+//		return null;
+//	}
+	
+	private QuizRes checkQuestionnaireId(QuizReq req) {
+	    System.out.println("Questionnaire ID: " + req.getQuestionnaire().getId()); // 檢查問卷ID
+	    if (req.getQuestionnaire().getId() <= 0) {
+	        System.out.println("Error: Invalid Questionnaire ID");
+	        return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+	    }
+
+	    List<Question> quList = req.getQuestionList();
+	    for (Question qu : quList) {
+	        System.out.println("Question ID: " + qu.getQnId()); // 檢查每個問題的問卷ID
+	        if (qu.getQnId() != req.getQuestionnaire().getId()) {
+	            System.out.println("Error: Question ID does not match Questionnaire ID");
+	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+	        }
+	    }
+
+	    List<Question> quDelList = req.getDeleteQuestionList();
+	    for (Question qu : quDelList) {
+	        System.out.println("Deleted Question ID: " + qu.getQnId()); // 檢查每個刪除的問題的問卷ID
+	        if (qu.getQnId() != req.getQuestionnaire().getId()) {
+	            System.out.println("Error: Deleted Question ID does not match Questionnaire ID");
+	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
+	        }
+	    }
+
+	    return null;
 	}
+
 	
 	@Override	
 	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//刪除多筆資料
@@ -155,7 +185,12 @@ public class QuizServiceImpl implements QuizService{
 		return new QuizRes(RtnCode.SUCCESSFUL);
 
 	}
-
+	
+	@Cacheable(cacheNames = "search", 
+			// key = #title_#startDate_#endDate
+			// key = "test_2023-11-10_2023-11-31"
+			key = "#title.concat('_').concat(#startDate.toString()).concat('_').concat(#endDate.toString())", 
+			unless = "#result.rtnCode.code != 200") 
 	@Override
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate) {
 		title = StringUtils.hasText(title)? title:"";	//三元式寫法：問號的左邊為判斷式，如有內容則回傳標題，無內容標題等於空字串
