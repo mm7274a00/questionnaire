@@ -5,11 +5,13 @@ import java.util.List;
 
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class QuizVo {
 	
 	private Questionnaire questionnaire = new Questionnaire();	//問卷
 	
+	@JsonProperty("question_list")
 	private List<Question> questionList = new ArrayList<>(); //給予預設值為空，減少判斷式 //使用List包含多張問券
 
 	public QuizVo() {

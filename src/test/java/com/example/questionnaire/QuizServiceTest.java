@@ -52,8 +52,4 @@ public class QuizServiceTest {
         QuizRes updateRes = service.update(req);
 		Assert.isTrue(updateRes.getRtnCode().getCode() == 200, "update error!");
     }
-     
-    @Test
-    public void searchTest() {
-    }
 }//

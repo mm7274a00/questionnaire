@@ -34,4 +34,9 @@ public class QuizController {
 		LocalDate endDate = req.getEndDate() !=null? req.getEndDate() :LocalDate.of(2099, 12,31);
 		return service.search(title, startDate, endDate);
 	}
+	
+	@PostMapping(value = "api/quiz/update")	
+	public QuizRes update(@RequestBody QuizReq req) {	
+		return service.update(req);
+	}
 }//

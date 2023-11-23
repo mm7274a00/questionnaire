@@ -15,6 +15,7 @@ public class Question {
 	@Column(name = "id")
 	private int quId;
 	
+	@Id
 	@Column(name = "qn_id")
 	private int qnId;
 	
@@ -25,7 +26,7 @@ public class Question {
 	private String optionType;
 	
 	@Column(name = "is_necessary")
-	private String necessary;
+	private boolean necessary;
 	
 	@Column(name = "q_option")
 	private String option;
@@ -34,7 +35,7 @@ public class Question {
 		super();
 	}
 
-	public Question(int quId, int qnId, String qTitle, String optionType, String necessary, String option) {
+	public Question(int quId, int qnId, String qTitle, String optionType, boolean necessary, String option) {
 		super();
 		this.quId = quId;
 		this.qnId = qnId;
@@ -85,11 +86,11 @@ public class Question {
 		this.optionType = optionType;
 	}
 
-	public String getNecessary() {
+	public boolean getNecessary() {
 		return necessary;
 	}
 
-	public void setNecessary(String necessary) {
+	public void setNecessary(boolean necessary) {
 		this.necessary = necessary;
 	}
 
