@@ -12,6 +12,7 @@ import org.springframework.util.Assert;
 
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
+import com.example.questionnaire.respository.QuestionDao;
 import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuizReq;
@@ -22,6 +23,12 @@ public class QuizServiceTest {
 	
 	@Autowired
 	private QuizService service;
+	
+	@Autowired
+	private QuestionnaireDao qnDao;
+	
+	@Autowired
+	private QuestionDao qDao;
 	
 	@Test
 	public void createTest() {
@@ -38,18 +45,42 @@ public class QuizServiceTest {
 		Assert.isTrue(res.getRtnCode().getCode() == 200, "create error!");
 	}
 	
+//    @Test
+//    public void updateTest() {
+//    	Questionnaire questionnaire = new Questionnaire(25,"test1", "test",false, 
+//				LocalDate.of(2023, 11, 17), LocalDate.of(2023, 11, 30));
+//		
+//		List<Question> questionList = new ArrayList<>();
+//		Question q1 = new Question(1,"test_question_111","single",false,"AAA;BBB;CCC");
+//		Question q2 = new Question(2,"test_question_2","multi",false,"10;20;30;40");
+//		Question q3 = new Question(3,"test_question_3","text",false,"ABC");
+//		questionList.addAll(Arrays.asList(q1, q2, q3));
+//		QuizReq req = new QuizReq(questionnaire,questionList);
+//        QuizRes updateRes = service.update(req);
+//		Assert.isTrue(updateRes.getRtnCode().getCode() == 200, "update error!");
+//    }
+    
+    @Test
+    public void insertTest() {
+    	int res = qnDao.insertData( "qa_03", "qa_01 test", false, LocalDate.of(2023,11,24),LocalDate.of(2024, 01, 02) );
+    	System.out.println(res);
+    }
+    
+    @Test
+    public void insertTest2() {
+    	int res = qDao.insert( 1, 1, "qa_01 test", "single", false, "X;Y;Z");
+    	System.out.println(res);
+    }
+    
     @Test
     public void updateTest() {
-    	Questionnaire questionnaire = new Questionnaire(25,"test1", "test",false, 
-				LocalDate.of(2023, 11, 17), LocalDate.of(2023, 11, 30));
-		
-		List<Question> questionList = new ArrayList<>();
-		Question q1 = new Question(1,"test_question_111","single",false,"AAA;BBB;CCC");
-		Question q2 = new Question(2,"test_question_2","multi",false,"10;20;30;40");
-		Question q3 = new Question(3,"test_question_3","text",false,"ABC");
-		questionList.addAll(Arrays.asList(q1, q2, q3));
-		QuizReq req = new QuizReq(questionnaire,questionList);
-        QuizRes updateRes = service.update(req);
-		Assert.isTrue(updateRes.getRtnCode().getCode() == 200, "update error!");
+    	int res = qnDao.update(5, "qn_007", "qn_007_test");
+    	System.out.println(res);	//幾筆資料，如id不存在會印出 0
+    }
+    
+    @Test
+    public void updateDataTest() {
+    	int res = qnDao.updateData(4, "qn_099", "qn_099_test", LocalDate.of(2023, 11, 20));
+    	System.out.println(res);
     }
 }//
