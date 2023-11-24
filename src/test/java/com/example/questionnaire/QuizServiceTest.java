@@ -83,4 +83,15 @@ public class QuizServiceTest {
     	int res = qnDao.updateData(4, "qn_099", "qn_099_test", LocalDate.of(2023, 11, 20));
     	System.out.println(res);
     }
+    
+    @Test
+    public void selectTest1() {
+//    	List<Questionnaire> res = qnDao.findByStartDate(LocalDate.of(2023, 11, 20));
+//    	List<Questionnaire> res = qnDao.findByStartDate1(LocalDate.of(2023, 11, 20));
+//    	List<Questionnaire> res = qnDao.findByStartDate2(LocalDate.of(2023, 11, 20));	
+//    	List<Questionnaire> res = qnDao.findByStartDate3(LocalDate.of(2023, 11, 20),true);	
+//    	List<Questionnaire> res = qnDao.findByStartDate4(LocalDate.of(2023, 11, 20),true);	
+    	List<Questionnaire> res = qnDao.findByStartDate5(LocalDate.of(2023, 11, 20),true, 2);	
+    	System.out.println(res.size());
+    }
 }//

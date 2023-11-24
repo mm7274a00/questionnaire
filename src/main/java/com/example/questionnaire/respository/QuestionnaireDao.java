@@ -22,7 +22,7 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 
 	public Questionnaire findTopByOrderByIdDesc();
 
-	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqualAndIsPublishedTrue(String title,
+	public List<Questionnaire> findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqualAndPublishedIsTrue(String title,
 			LocalDate startDate, LocalDate endDate);
 	
 	@Modifying
@@ -65,12 +65,50 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 	
 	@Modifying(clearAutomatically = true)
 	@Transactional
-	@Query(value = "update questionnaire set title = :title, description = :desp, start_date = :startDate "
+	@Query(value = "update questionnaire set title = :title, description = :desp, start_Date = :startDate "
 			+ " where id = :id",nativeQuery = true)
 	public int updateData(
 			@Param("id")int id,
 			@Param("title")String title, 
 			@Param("desp")String description,
 			@Param("startDate")LocalDate startDate);
+	
+	//=========================================
+	//select
+	@Query(value = "select * from questionnaire "
+			+ " where start_date > :startDate", nativeQuery = true)
+	public List<Questionnaire> findByStartDate(@Param("startDate")LocalDate startDate);
+	
+	@Query(value = "select new Questionnaire(id, title, description, published, startDate, endDate )"
+			+ " from Questionnaire where startDate > :startDate")
+	public List<Questionnaire> findByStartDate1(@Param("startDate")LocalDate startDate);
+	
+	//	nativeQuery = false, select的欄位要使用建構方法，且 Entity 中也要有對應的建構方法，否則會報錯
+	@Query(value = "select new Questionnaire(id, title, published )"
+			+ " from Questionnaire where startDate > :startDate")
+	public List<Questionnaire> findByStartDate2(@Param("startDate")LocalDate startDate);
+	
+	//	使用別名，語法 as 別名
+	@Query(value = "select qu from Questionnaire as qu "
+			+ " where startDate > :startDate or published = :isPublished")
+	public List<Questionnaire> findByStartDate3(
+			@Param("startDate")LocalDate startDate, 
+			@Param("isPublished")boolean published);
+	
+	//order by
+	@Query(value = "select qu from Questionnaire as qu "
+			+ " where startDate > :startDate or published = :isPublished order by id desc")
+	public List<Questionnaire> findByStartDate4(
+			@Param("startDate")LocalDate startDate, 
+			@Param("isPublished")boolean published);
+	
+	//order by + limit(limit語法只能使用在 nativeQuery = true)
+	@Query(value = "select * from Questionnaire as qu "
+			+ " where start_date > :startDate or is_published = :isPublished order by id desc limit :num "
+			, nativeQuery = true)
+	public List<Questionnaire> findByStartDate5(
+			@Param("startDate")LocalDate startDate, 
+			@Param("isPublished")boolean published,
+			@Param("num")int limitNum);
 
 }//
