@@ -19,6 +19,7 @@ import com.example.questionnaire.entity.Questionnaire;
 import com.example.questionnaire.respository.QuestionDao;
 import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
+import com.example.questionnaire.vo.QnQuVo;
 import com.example.questionnaire.vo.QuestionRes;
 import com.example.questionnaire.vo.QuestionnaireRes;
 import com.example.questionnaire.vo.QuizReq;
@@ -252,5 +253,18 @@ public class QuizServiceImpl implements QuizService{
 		List<Question> quList = quDao.findAllByQnIdIn(Arrays.asList(qnId));
 		return new QuestionRes(quList,RtnCode.SUCCESSFUL);
 	}
+
+	@Override
+	public QuizRes searchFuzzy(String title, LocalDate startDate, LocalDate endDate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+//	@Override
+//	public QuizRes searchFuzzy(String title, LocalDate startDate, LocalDate endDate) {
+//		// TODO Auto-generated method stub
+//		List<QnQuVo> res = null;
+////		return new QuizRes(null, res, RtnCode.SUCCESSFUL);
+//	}
 	
 	}//

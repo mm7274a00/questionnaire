@@ -12,6 +12,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.example.questionnaire.entity.Questionnaire;
+import com.example.questionnaire.vo.QnQuVo;
 
 @Repository
 public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
@@ -110,5 +111,56 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 			@Param("startDate")LocalDate startDate, 
 			@Param("isPublished")boolean published,
 			@Param("num")int limitNum);
-
+	
+	@Query(value = "select * from questionnaire"
+			+ " limit :startIndex, :limitNum", nativeQuery = true)
+	public List<Questionnaire> findWithLimitAndStartIndex(
+			@Param("startIndex")int startIndex, //
+			@Param("limitNum")int limitNum);
+	
+	//like
+	@Query(value = "select * from questionnaire"
+			+ " where title like %:title", nativeQuery = true)
+	public List<Questionnaire> searchTitleLike(@Param("title")String title);
+	
+	//regexp
+	@Query(value = "select * from questionnaire"
+			+ " where title regexp :title", nativeQuery = true)
+	public List<Questionnaire> searchTitleLike2(@Param("title")String title);
+	
+	// regexp or
+	// regexp 只能用在 nativeQuery = true
+	@Query(value = "select * from questionnaire"
+			+ " where description regexp :keyword1|:keyword2", nativeQuery = true)
+	public List<Questionnaire> searchDescriptionContaining(
+			@Param("keyword1")String keyword1,
+			@Param("keyword2")String keyword2
+			);
+	
+	//與searchDescriptionContaining效果一樣
+	@Query(value = "select * from questionnaire"
+			+ " where description regexp concat(:keyword1,'|' ,:keyword2) ", nativeQuery = true)
+	public List<Questionnaire> searchDescriptionContaining2(
+			@Param("keyword1")String keyword1,
+			@Param("keyword2")String keyword2
+			);
+	
+	//============
+	//join
+	@Query("select new com.example.questionnaire.vo.QnQuVo("
+			+ "qn.id, qn.title, qn.description, qn.published, qn.startDate, qn.endDate,"
+			+ "q.quId, q.qTitle, q.optionType, q.necessary, q.option)"
+			+ "from Questionnaire as qn join Question as q on qn.id = q.qnId")
+	public List<QnQuVo> selectJoinQnQu();
+	
+	
+//	@Query("select new com.example.questionnaire.vo.QnQuVo("
+//			+ " qn.id, qn.title, qn.description, qn.published, qn.startDate, qn.endDate,"
+//			+ " q.quId, q.qTitle, q.optionType, q.necessary, q.option)"
+//			+ " from Questionnaire as qn join Question as q on qn.id = q.qnId"
+//			+ " where qn.title regexp %:title and qn.startDate >= :startDate and qn.endDate <= :endDate")
+//	public List <QnQuVo> selectFuzzy(
+//		    @Param("title") String title,
+//		    @Param("startDate") LocalDate startDate,
+//		    @Param("endDate") LocalDate endDate);
 }//

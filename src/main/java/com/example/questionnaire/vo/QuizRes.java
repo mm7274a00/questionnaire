@@ -14,6 +14,8 @@ public class QuizRes {
 	//使用組合統整上面兩行
 	private List<QuizVo> quizVoList;
 	
+	private List<QnQuVo> qnQuVoList;
+	
 	private RtnCode rtnCode;
 
 	public QuizRes() {
@@ -24,6 +26,7 @@ public class QuizRes {
 		super();
 		this.rtnCode = rtnCode;
 	}
+	
 	
 	public QuizRes(List<QuizVo> quizVoList, RtnCode rtnCode) {
 		super();

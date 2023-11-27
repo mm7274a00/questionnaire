@@ -21,6 +21,8 @@ public interface QuizService {
 	
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate);
 	
+	public QuizRes searchFuzzy(String title, LocalDate startDate, LocalDate endDate);
+	
 	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, boolean isPublished);
 
 	public QuestionRes searchQuestionList(int qnId);

@@ -15,6 +15,7 @@ import com.example.questionnaire.entity.Questionnaire;
 import com.example.questionnaire.respository.QuestionDao;
 import com.example.questionnaire.respository.QuestionnaireDao;
 import com.example.questionnaire.service.ifs.QuizService;
+import com.example.questionnaire.vo.QnQuVo;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 
@@ -94,4 +95,46 @@ public class QuizServiceTest {
     	List<Questionnaire> res = qnDao.findByStartDate5(LocalDate.of(2023, 11, 20),true, 2);	
     	System.out.println(res.size());
     }
+    
+    @Test
+    public void limitTest1() {
+    	List<Questionnaire> res = qnDao.findWithLimitAndStartIndex(1, 3);
+    	for(Questionnaire item :res) {
+    		System.out.println(item.getId());
+    	}
+    	res.forEach(item ->{
+    		System.out.println(item.getId());
+    	});
+    }
+    
+    @Test
+    public void likeTest() {
+    	List<Questionnaire> res = qnDao.searchTitleLike("test");
+    	for(Questionnaire item :res) {
+    		System.out.println(item.getTitle());
+    	}
+    }
+    
+    @Test
+    public void regexpTest() {
+    	List<Questionnaire> res = qnDao.searchDescriptionContaining("qa","qn");
+    	for(Questionnaire item :res) {
+    		System.out.println(item.getDescription());
+    	}
+    }
+    
+    @Test
+    public void joinTest() {
+    	List<QnQuVo> res = qnDao.selectJoinQnQu();
+    	for(QnQuVo item : res) {
+    		System.out.printf("id: %d, title: %s, qu_id: %d \n",
+    				item.getId(), item.getTitle(), item.getQuId());
+    	}
+    }
+    
+//    @Test
+//    public void selectFuzzyTest() {
+//    	List<QnQuVo> res = qnDao("test", LocalDate.of(1971, 1, 1), LocalDate.of(1971, 1, 1))
+//    		System.out.println();
+//    }
 }//
