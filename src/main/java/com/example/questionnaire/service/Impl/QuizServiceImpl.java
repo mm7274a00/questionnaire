@@ -254,6 +254,12 @@ public class QuizServiceImpl implements QuizService{
 		return new QuestionRes(quList,RtnCode.SUCCESSFUL);
 	}
 
+	@Override
+	public QuizRes searchFuzzy(String title, LocalDate startDate, LocalDate endDate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 //	@Override
 //	public QuizRes searchFuzzy(String title, LocalDate startDate, LocalDate endDate) {
