@@ -154,13 +154,14 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 	public List<QnQuVo> selectJoinQnQu();
 	
 	
-//	@Query("select new com.example.questionnaire.vo.QnQuVo("
-//			+ " qn.id, qn.title, qn.description, qn.published, qn.startDate, qn.endDate,"
-//			+ " q.quId, q.qTitle, q.optionType, q.necessary, q.option)"
-//			+ " from Questionnaire as qn join Question as q on qn.id = q.qnId"
-//			+ " where qn.title regexp %:title and qn.startDate >= :startDate and qn.endDate <= :endDate")
-//	public List <QnQuVo> selectFuzzy(
-//		    @Param("title") String title,
-//		    @Param("startDate") LocalDate startDate,
-//		    @Param("endDate") LocalDate endDate);
+	@Query("select new com.example.questionnaire.vo.QnQuVo("
+			+ " qn.id, qn.title, qn.description, qn.published, qn.startDate, qn.endDate,"
+			+ " q.quId, q.qTitle, q.optionType, q.necessary, q.option)"
+			+ " from Questionnaire as qn join Question as q on qn.id = q.qnId"
+			+ " where qn.title regexp %:title and qn.startDate >= :startDate and qn.endDate <= :endDate")
+	public List <QnQuVo> selectFuzzy(
+		    @Param("title") String title,
+		    @Param("startDate") LocalDate startDate, //
+		    @Param("endDate") LocalDate endDate);
+	
 }//

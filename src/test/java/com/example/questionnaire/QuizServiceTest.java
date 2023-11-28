@@ -131,10 +131,10 @@ public class QuizServiceTest {
     				item.getId(), item.getTitle(), item.getQuId());
     	}
     }
-    
+//    
 //    @Test
 //    public void selectFuzzyTest() {
-//    	List<QnQuVo> res = qnDao("test", LocalDate.of(1971, 1, 1), LocalDate.of(1971, 1, 1))
-//    		System.out.println();
+//    	QuizRes res = service.searchFuzzy("test", LocalDate.of(1971, 1, 1), LocalDate.of(2099, 1, 1));
+//    	System.out.println(res.getQuizVoList().size());
 //    }
 }//
