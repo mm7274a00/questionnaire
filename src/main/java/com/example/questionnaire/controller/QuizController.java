@@ -1,6 +1,7 @@
 package com.example.questionnaire.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.util.StringUtils;
@@ -53,5 +54,21 @@ public class QuizController {
 	@PostMapping(value = "api/quiz/update")	
 	public QuizRes update(@RequestBody QuizReq req) {	
 		return service.update(req);
+	}
+	
+//	@PostMapping(value = "api/quiz/deleteQuestionnaire")
+//	public QuizRes deleteQuestionnaire(@RequestBody List<Integer> qnIdList) {
+//		return service.deleteQuestionnaire(qnIdList);
+//	}
+	
+	@PostMapping(value = "api/quiz/deleteQuiz")
+	public QuizRes deleteQuiz(@RequestBody List<Integer> qnIdList) {
+	    // Delete questions associated with each questionnaire
+	    for (Integer qnId : qnIdList) {
+	        service.deleteQuestion(qnId, qnIdList);  // Assume you have a deleteQuestion method in your service
+	    }
+	    
+	    // Delete questionnaires
+	    return service.deleteQuestionnaire(qnIdList);
 	}
 }//

@@ -145,15 +145,19 @@ public class QuizServiceImpl implements QuizService{
 	            System.out.println("Error: Question ID does not match Questionnaire ID");
 	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	        }
+	    }    
+	    for (Question qu : req.getQuestionList()) {
+	        qu.setQnId(req.getQuestionnaire().getId()); // 使用当前问卷的id来设置问题的qnId
 	    }
+	    quDao.saveAll(req.getQuestionList());
 
 	    List<Question> quDelList = req.getDeleteQuestionList();
 	    for (Question qu : quDelList) {
 	        System.out.println("Deleted Question ID: " + qn.getId()); // 檢查每個刪除的問題的問卷ID
+        	System.out.println(qn.getId());
+        	System.out.println("33" + qu.getQnId());
+        	System.out.println(req.getQuestionnaire().getId());
 	        if (qn.getId() != req.getQuestionnaire().getId()) {
-//	        	System.out.println(qn.getId());
-//	        	System.out.println(qu.getQnId());
-//	        	System.out.println(req.getQuestionnaire().getId());
 	            System.out.println("Error: Deleted Question ID does not match Questionnaire ID22");
 	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	        }
@@ -162,7 +166,7 @@ public class QuizServiceImpl implements QuizService{
 	    return null;
 	}
 
-	
+	@Transactional
 	@Override	
 	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//刪除多筆資料
 		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
@@ -180,6 +184,7 @@ public class QuizServiceImpl implements QuizService{
 		return new QuizRes(RtnCode.SUCCESSFUL);
 	}
 	
+	@Transactional
 	@Override
 	public QuizRes deleteQuestion(int qnId,List<Integer>quIdList){
 		//							1.				1,2,3
