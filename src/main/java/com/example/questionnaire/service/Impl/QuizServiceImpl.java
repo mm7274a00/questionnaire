@@ -37,7 +37,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Transactional
 	@Override
-	public QuizRes create(QuizReq req) {	//«Ø¥ß°İ¨÷
+	public QuizRes create(QuizReq req) {	//å»ºç«‹å•å·
 		QuizRes checkResult = checkParam(req);
 		if(checkResult != null) {
 			return checkResult;
@@ -57,7 +57,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Transactional	
 	@Override
-	public QuizRes update(QuizReq req) {	//§ó·s¡B­×§ï°İ¨é
+	public QuizRes update(QuizReq req) {	//æ›´æ–°ã€ä¿®æ”¹å•åˆ¸
 		QuizRes checkResult = checkParam(req);
 		if(checkResult != null){
 			return checkResult;
@@ -76,9 +76,9 @@ public class QuizServiceImpl implements QuizService{
 			deletedQuIdList.add(qu.getQuId());
 		}
 		Questionnaire qn = qnOp.get();
-		//¥i¥H­×§ïªº±ø¥ó¡G
-		//1.©|¥¼µo¥¬¡Gpublished == flase¡A¥i¥H­×§ï
-		//2. ¤wµo¥¬¦ı©|¥¼¶}©l¶i¦æ¡Gis_published == true + ·í«e®É¶¡¥²¶·¤p©ó start_date
+		//å¯ä»¥ä¿®æ”¹çš„æ¢ä»¶ï¼š
+		//1.å°šæœªç™¼å¸ƒï¼špublished == flaseï¼Œå¯ä»¥ä¿®æ”¹
+		//2. å·²ç™¼å¸ƒä½†å°šæœªé–‹å§‹é€²è¡Œï¼šis_published == true + ç•¶å‰æ™‚é–“å¿…é ˆå°æ–¼ start_date
 		if(!qn.isPublished() || (qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate()))) {
 			qnDao.save(req.getQuestionnaire());
 			quDao.saveAll(req.getQuestionList());
@@ -127,16 +127,21 @@ public class QuizServiceImpl implements QuizService{
 //	}
 	
 	private QuizRes checkQuestionnaireId(QuizReq req) {
-	    System.out.println("Questionnaire ID: " + req.getQuestionnaire().getId()); // ÀË¬d°İ¨÷ID
+	    System.out.println("Questionnaire ID: " + req.getQuestionnaire().getId()); // æª¢æŸ¥å•å·ID
 	    if (req.getQuestionnaire().getId() <= 0) {
 	        System.out.println("Error: Invalid Questionnaire ID");
 	        return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	    }
 
 	    List<Question> quList = req.getQuestionList();
+	    Questionnaire qn = req.getQuestionnaire();
 	    for (Question qu : quList) {
-	        System.out.println("Question ID: " + qu.getQnId()); // ÀË¬d¨C­Ó°İÃDªº°İ¨÷ID
-	        if (qu.getQnId() != req.getQuestionnaire().getId()) {
+	        System.out.println("Question ID: " + qn.getId()); // æª¢æŸ¥æ¯å€‹å•é¡Œçš„å•å·ID
+
+	        if (qn.getId() != req.getQuestionnaire().getId()) {
+	        	System.out.println(qn.getId());
+	        	System.out.println(qu.getQnId());
+	        	System.out.println(req.getQuestionnaire().getId());
 	            System.out.println("Error: Question ID does not match Questionnaire ID");
 	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	        }
@@ -144,9 +149,12 @@ public class QuizServiceImpl implements QuizService{
 
 	    List<Question> quDelList = req.getDeleteQuestionList();
 	    for (Question qu : quDelList) {
-	        System.out.println("Deleted Question ID: " + qu.getQnId()); // ÀË¬d¨C­Ó§R°£ªº°İÃDªº°İ¨÷ID
-	        if (qu.getQnId() != req.getQuestionnaire().getId()) {
-	            System.out.println("Error: Deleted Question ID does not match Questionnaire ID");
+	        System.out.println("Deleted Question ID: " + qn.getId()); // æª¢æŸ¥æ¯å€‹åˆªé™¤çš„å•é¡Œçš„å•å·ID
+	        if (qn.getId() != req.getQuestionnaire().getId()) {
+//	        	System.out.println(qn.getId());
+//	        	System.out.println(qu.getQnId());
+//	        	System.out.println(req.getQuestionnaire().getId());
+	            System.out.println("Error: Deleted Question ID does not match Questionnaire ID22");
 	            return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	        }
 	    }
@@ -156,7 +164,7 @@ public class QuizServiceImpl implements QuizService{
 
 	
 	@Override	
-	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//§R°£¦hµ§¸ê®Æ
+	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//åˆªé™¤å¤šç­†è³‡æ–™
 		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
 		List<Integer> idList = new ArrayList<>();
 		for(Questionnaire qn:qnList) {
@@ -165,9 +173,9 @@ public class QuizServiceImpl implements QuizService{
 				idList.add(qn.getId());
 			}
 		}
-		if(!idList.isEmpty()) {	//ÀË¬d¤º®e¬O§_¬°ªÅ¡A¦p¬OªÅªº«h¤£¥Î§R°£
-			qnDao.deleteAllById(idList);	//§R°£"°İ¨÷"
-			quDao.deleteAllByQnIdIn(idList);	//§R°£°İ¨÷¤ºªº"ÃD¥Ø"
+		if(!idList.isEmpty()) {	//æª¢æŸ¥å…§å®¹æ˜¯å¦ç‚ºç©ºï¼Œå¦‚æ˜¯ç©ºçš„å‰‡ä¸ç”¨åˆªé™¤
+			qnDao.deleteAllById(idList);	//åˆªé™¤"å•å·"
+			quDao.deleteAllByQnIdIn(idList);	//åˆªé™¤å•å·å…§çš„"é¡Œç›®"
 		}
 		return new QuizRes(RtnCode.SUCCESSFUL);
 	}
@@ -194,17 +202,17 @@ public class QuizServiceImpl implements QuizService{
 			unless = "#result.rtnCode.code != 200") 
 	@Override
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate) {
-		title = StringUtils.hasText(title)? title:"";	//¤T¤¸¦¡¼gªk¡G°İ¸¹ªº¥ªÃä¬°§PÂ_¦¡¡A¦p¦³¤º®e«h¦^¶Ç¼ĞÃD¡AµL¤º®e¼ĞÃDµ¥©óªÅ¦r¦ê
+		title = StringUtils.hasText(title)? title:"";	//ä¸‰å…ƒå¼å¯«æ³•ï¼šå•è™Ÿçš„å·¦é‚Šç‚ºåˆ¤æ–·å¼ï¼Œå¦‚æœ‰å…§å®¹å‰‡å›å‚³æ¨™é¡Œï¼Œç„¡å…§å®¹æ¨™é¡Œç­‰æ–¼ç©ºå­—ä¸²
 		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
-		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);	//¦¹¤T¦æµ¥©ó¥H¤U¼gªk
+		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);	//æ­¤ä¸‰è¡Œç­‰æ–¼ä»¥ä¸‹å¯«æ³•
 //		if(StringUtils.hasText(title)) {
-//			title = "";	//¦p¥¼¿é¤J¼ĞÃDÃöÁä¦r¡A«h¬°ªÅ¦r¦ê¡A¤~¯à¼´±o¥X©Ò¦³¸ê®Æ
+//			title = "";	//å¦‚æœªè¼¸å…¥æ¨™é¡Œé—œéµå­—ï¼Œå‰‡ç‚ºç©ºå­—ä¸²ï¼Œæ‰èƒ½æ’ˆå¾—å‡ºæ‰€æœ‰è³‡æ–™
 //		}
 //		if(startDate == null) {
-//			startDate = LocalDate.of(1971, 1,1);	//¦p¥¼¿é¤J®É¶¡¡A«hµ¹¤@­Ó¶W¦­¶}©l®É¶¡
+//			startDate = LocalDate.of(1971, 1,1);	//å¦‚æœªè¼¸å…¥æ™‚é–“ï¼Œå‰‡çµ¦ä¸€å€‹è¶…æ—©é–‹å§‹æ™‚é–“
 //		}
 //		if(endDate == null) {
-//			endDate = LocalDate.of(2099, 12,31);	//¦p¥¼¿é¤J®É¶¡¡A«hµ¹¤@­Ó¶W±ßµ²§ô®É¶¡
+//			endDate = LocalDate.of(2099, 12,31);	//å¦‚æœªè¼¸å…¥æ™‚é–“ï¼Œå‰‡çµ¦ä¸€å€‹è¶…æ™šçµæŸæ™‚é–“
 //		}
 		List<Questionnaire> qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
 		List<Integer> qnIds = new ArrayList<>();
@@ -230,7 +238,7 @@ public class QuizServiceImpl implements QuizService{
 
 	@Override
 	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, 
-			boolean isPublished) {	//°İ¨÷²M³æ
+			boolean isPublished) {	//å•å·æ¸…å–®
 		title = StringUtils.hasText(title)? title:"";
 		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
 		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);
