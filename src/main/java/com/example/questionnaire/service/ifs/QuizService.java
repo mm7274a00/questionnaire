@@ -27,4 +27,6 @@ public interface QuizService {
 
 	public QuestionRes searchQuestionList(int qnId);
 	
+	
+	
 }
