@@ -165,7 +165,7 @@ public class QuizServiceImpl implements QuizService{
 
 	    return null;
 	}
-
+	
 	@Transactional
 	@Override	
 	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//��憭����
@@ -200,11 +200,11 @@ public class QuizServiceImpl implements QuizService{
 
 	}
 	
-	@Cacheable(cacheNames = "search", 
-			// key = #title_#startDate_#endDate
-			// key = "test_2023-11-10_2023-11-31"
-			key = "#title.concat('_').concat(#startDate.toString()).concat('_').concat(#endDate.toString())", 
-			unless = "#result.rtnCode.code != 200") 
+//	@Cacheable(cacheNames = "search", 
+//			// key = #title_#startDate_#endDate
+//			// key = "test_2023-11-10_2023-11-31"
+//			key = "#title.concat('_').concat(#startDate.toString()).concat('_').concat(#endDate.toString())", 
+//			unless = "#result.rtnCode.code != 200") 
 	@Override
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate) {
 		title = StringUtils.hasText(title)? title:"";	//銝��神瘜����椰����撘���摰孵��璅���摰寞���蝛箏�葡

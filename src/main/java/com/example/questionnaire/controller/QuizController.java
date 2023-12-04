@@ -74,7 +74,7 @@ public class QuizController {
 	}
 	
 	@GetMapping(value = "api/quiz/searchQuestionList")
-	public QuestionRes searchQuestionList(@RequestParam int qnId) {
+	public QuestionRes searchQuestionList(@RequestParam(value = "qnId") int qnId) {
 	    return service.searchQuestionList(qnId);
 	}
 
