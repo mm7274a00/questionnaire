@@ -74,6 +74,11 @@ public interface QuestionnaireDao extends JpaRepository<Questionnaire, Integer>{
 			@Param("desp")String description,
 			@Param("startDate")LocalDate startDate);
 	
+	@Modifying
+	@Transactional
+	@Query(value = "update Questionnaire set published = true where startDate = :today ")
+	public int updateQnStatus(LocalDate today);
+	
 	//=========================================
 	//select
 	@Query(value = "select * from questionnaire "

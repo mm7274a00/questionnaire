@@ -1,6 +1,7 @@
 package com.example.questionnaire.service.Impl;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,6 +11,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -26,6 +29,7 @@ import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizVo;
 
+@EnableScheduling
 @Service
 public class QuizServiceImpl implements QuizService{
 	
@@ -281,5 +285,20 @@ public class QuizServiceImpl implements QuizService{
 //		List<QnQuVo> res = null;
 //		return new QuizRes(null, res, RtnCode.SUCCESSFUL);
 //	}
+	
+	//	 			 秒 分 時 日 月 週
+	@Scheduled(cron = "0/5 * 14 * * *")
+	public void schedule() {
+		System.out.println(LocalDateTime.now());
+	}
+	
+	//自動根據時間更改某欄位
+	@Scheduled(cron = "0 0 0 * * *")
+	public void updateQnStatue() {
+		LocalDate today = LocalDate.now();
+		int res = qnDao.updateQnStatus(today);
+		System.out.println(today);
+		System.out.println(res);
+	}
 	
 	}//
