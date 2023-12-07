@@ -41,7 +41,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Transactional
 	@Override
-	public QuizRes create(QuizReq req) {	//撱箇��
+	public QuizRes create(QuizReq req) {	//建立問卷
 		QuizRes checkResult = checkParam(req);
 		if(checkResult != null) {
 			return checkResult;
@@ -61,7 +61,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Transactional	
 	@Override
-	public QuizRes update(QuizReq req) {	//���耨���
+	public QuizRes update(QuizReq req) {	//更新、修改問卷
 		QuizRes checkResult = checkParam(req);
 		if(checkResult != null){
 			return checkResult;
@@ -80,9 +80,9 @@ public class QuizServiceImpl implements QuizService{
 			deletedQuIdList.add(qu.getQuId());
 		}
 		Questionnaire qn = qnOp.get();
-		//�隞乩耨����辣嚗�
-		//1.撠�撣�ublished == flase嚗隞乩耨�
-		//2. 撌脩撣������脰��s_published == true + �������� start_date
+        //可以修改的條件：
+        //1.尚未發布：published == flase，可以修改
+        //2. 已發布但尚未開始進行：is_published == true + 當前時間必須小於 start_date
 		if(!qn.isPublished() || (qn.isPublished() && LocalDate.now().isBefore(qn.getStartDate()))) {
 			qnDao.save(req.getQuestionnaire());
 			quDao.saveAll(req.getQuestionList());
@@ -131,8 +131,8 @@ public class QuizServiceImpl implements QuizService{
 //	}
 	
 	private QuizRes checkQuestionnaireId(QuizReq req) {
-	    System.out.println("Questionnaire ID: " + req.getQuestionnaire().getId()); // 瑼Ｘ��ID
-	    if (req.getQuestionnaire().getId() <= 0) {
+        System.out.println("Questionnaire ID: " + req.getQuestionnaire().getId()); // 檢查問卷ID
+        if (req.getQuestionnaire().getId() <= 0) {
 	        System.out.println("Error: Invalid Questionnaire ID");
 	        return new QuizRes(RtnCode.QUESTIONNAIRE_ID_PARAM_ERROR);
 	    }
@@ -140,8 +140,7 @@ public class QuizServiceImpl implements QuizService{
 	    List<Question> quList = req.getQuestionList();
 	    Questionnaire qn = req.getQuestionnaire();
 	    for (Question qu : quList) {
-	        System.out.println("Question ID: " + qn.getId()); // 瑼Ｘ瘥�����ID
-
+            System.out.println("Question ID: " + qn.getId()); // 檢查每個問題的問卷ID
 	        if (qn.getId() != req.getQuestionnaire().getId()) {
 	        	System.out.println(qn.getId());
 	        	System.out.println(qu.getQnId());
@@ -151,14 +150,14 @@ public class QuizServiceImpl implements QuizService{
 	        }
 	    }    
 	    for (Question qu : req.getQuestionList()) {
-	        qu.setQnId(req.getQuestionnaire().getId()); // 雿輻敶����d�霈曄蔭�憸�nId
-	    }
-	    quDao.saveAll(req.getQuestionList());
+            qu.setQnId(req.getQuestionnaire().getId()); // 使用当前问卷的id来设置问题的qnId
+            }
+	    	quDao.saveAll(req.getQuestionList());
 
 	    List<Question> quDelList = req.getDeleteQuestionList();
 	    for (Question qu : quDelList) {
-	        System.out.println("Deleted Question ID: " + qn.getId()); // 瑼Ｘ瘥��������ID
-        	System.out.println(qn.getId());
+            System.out.println("Deleted Question ID: " + qn.getId()); // 檢查每個刪除的問題的問卷ID
+            System.out.println(qn.getId());
         	System.out.println("33" + qu.getQnId());
         	System.out.println(req.getQuestionnaire().getId());
 	        if (qn.getId() != req.getQuestionnaire().getId()) {
@@ -172,7 +171,7 @@ public class QuizServiceImpl implements QuizService{
 	
 	@Transactional
 	@Override	
-	public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {	//��憭����
+    public QuizRes deleteQuestionnaire(List<Integer>qnIdList) {    //刪除多筆資料
 		List<Questionnaire> qnList = qnDao.findByIdIn(qnIdList);
 		List<Integer> idList = new ArrayList<>();
 		for(Questionnaire qn:qnList) {
@@ -181,10 +180,10 @@ public class QuizServiceImpl implements QuizService{
 				idList.add(qn.getId());
 			}
 		}
-		if(!idList.isEmpty()) {	//瑼Ｘ�摰寞��蝛綽��蝛箇�����
-			qnDao.deleteAllById(idList);	//��"��"
-			quDao.deleteAllByQnIdIn(idList);	//��������"憿"
-		}
+        if(!idList.isEmpty()) {    //檢查內容是否為空，如是空的則不用刪除
+            qnDao.deleteAllById(idList);    //刪除"問卷"
+            quDao.deleteAllByQnIdIn(idList);    //刪除問卷內的"題目"
+            }
 		return new QuizRes(RtnCode.SUCCESSFUL);
 	}
 	
@@ -211,18 +210,18 @@ public class QuizServiceImpl implements QuizService{
 //			unless = "#result.rtnCode.code != 200") 
 	@Override
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate) {
-		title = StringUtils.hasText(title)? title:"";	//銝��神瘜����椰����撘���摰孵��璅���摰寞���蝛箏�葡
-		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
-		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);	//甇支���隞乩�神瘜�
+        title = StringUtils.hasText(title)? title:"";    //三元式寫法：問號的左邊為判斷式，如有內容則回傳標題，無內容標題等於空字串
+        startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
+        endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);    //此三行等於以下寫法
 //		if(StringUtils.hasText(title)) {
-//			title = "";	//憒頛詨璅��摮��蝛箏�葡嚗�����������
+//      title = "";    //如未輸入標題關鍵字，則為空字串，才能撈得出所有資料
 //		}
 //		if(startDate == null) {
-//			startDate = LocalDate.of(1971, 1,1);	//憒頛詨�����策銝���������
+//      	startDate = LocalDate.of(1971, 1,1);    //如未輸入時間，則給一個超早開始時間
 //		}
 //		if(endDate == null) {
-//			endDate = LocalDate.of(2099, 12,31);	//憒頛詨�����策銝���������
-//		}
+//      	endDate = LocalDate.of(2099, 12,31);    //如未輸入時間，則給一個超晚結束時間
+        //		}
 		List<Questionnaire> qnList = qnDao.findByTitleContainingAndStartDateGreaterThanEqualAndEndDateLessThanEqual(title, startDate, endDate);
 		List<Integer> qnIds = new ArrayList<>();
 		for(Questionnaire qu: qnList) {
@@ -247,7 +246,7 @@ public class QuizServiceImpl implements QuizService{
 
 	@Override
 	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, 
-			boolean isPublished) {	//��皜
+			boolean isPublished) {	//問卷清單
 		title = StringUtils.hasText(title)? title:"";
 		startDate = startDate != null? startDate : LocalDate.of(1971, 1,1);
 		endDate = endDate !=null? endDate :LocalDate.of(2099, 12,31);
