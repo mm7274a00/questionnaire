@@ -25,7 +25,7 @@ public class QuizController {
 	@Autowired
 	private QuizService service;
 	
-	@PostMapping(value = "api/quiz/create")	//´£¨Ñhttp¤èªk¡A©w¸q¥~³¡¨Ï¥Î¤§url
+	@PostMapping(value = "api/quiz/create")	//ï¿½ï¿½ï¿½ï¿½httpï¿½ï¿½kï¿½Aï¿½wï¿½qï¿½~ï¿½ï¿½ï¿½Ï¥Î¤ï¿½url
 	public QuizRes create(@RequestBody QuizReq req) {	
 		return service.create(req);
 	}

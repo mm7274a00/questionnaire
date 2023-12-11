@@ -299,5 +299,4 @@ public class QuizServiceImpl implements QuizService{
 		System.out.println(today);
 		System.out.println(res);
 	}
-	
 	}//

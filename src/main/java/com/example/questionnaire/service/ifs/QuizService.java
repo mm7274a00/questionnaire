@@ -17,7 +17,7 @@ public interface QuizService {
 	
 	public QuizRes deleteQuestionnaire(List<Integer> qnIdList);
 	
-	public QuizRes deleteQuestion(int qnId, List<Integer>quIdList);	//§R°£¦P¤@±i°Ý¨÷ªº ¤@­Ó ©Î ¦h­ÓÃD¥Ø
+	public QuizRes deleteQuestion(int qnId, List<Integer>quIdList);	//ï¿½Rï¿½ï¿½ï¿½Pï¿½@ï¿½iï¿½Ý¨ï¿½ï¿½ï¿½ ï¿½@ï¿½ï¿½ ï¿½ï¿½ ï¿½hï¿½ï¿½ï¿½Dï¿½ï¿½
 	
 	public QuizRes search(String title, LocalDate startDate, LocalDate endDate);
 	
