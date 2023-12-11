@@ -26,6 +26,8 @@ public interface QuizService {
 	public QuestionnaireRes searchQuestionnaireList(String title, LocalDate startDate, LocalDate endDate, boolean isPublished);
 
 	public QuestionRes searchQuestionList(int qnId);
+
+	public QuestionnaireRes searchQuestionnaire(int qnId);
 	
 	
 	

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuestionRes;
+import com.example.questionnaire.vo.QuestionnaireRes;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizSearchReq;
@@ -76,6 +77,11 @@ public class QuizController {
 	@GetMapping(value = "api/quiz/searchQuestionList")
 	public QuestionRes searchQuestionList(@RequestParam(value = "qnId") int qnId) {
 	    return service.searchQuestionList(qnId);
+	}
+	
+	@GetMapping(value = "api/quiz/searchQuestionnaire")
+	public QuestionnaireRes searchQuestionnaire(@RequestParam(value = "qnId") int qnId) {
+	    return service.searchQuestionnaire(qnId);
 	}
 
 }//

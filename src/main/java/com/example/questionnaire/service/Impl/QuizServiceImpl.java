@@ -299,4 +299,9 @@ public class QuizServiceImpl implements QuizService{
 		System.out.println(today);
 		System.out.println(res);
 	}
+	
+	public QuestionnaireRes searchQuestionnaire(int qnId) {	//問卷清單
+		List<Questionnaire> qnList = qnDao.findByIdIn(Arrays.asList(qnId));
+		return new QuestionnaireRes(qnList,RtnCode.SUCCESSFUL);
+	}
 	}//

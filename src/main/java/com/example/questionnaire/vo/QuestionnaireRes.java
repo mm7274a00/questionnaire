@@ -11,6 +11,7 @@ public class QuestionnaireRes {
 	
 	private RtnCode rtnCode;
 
+
 	public QuestionnaireRes() {
 		super();
 		// TODO Auto-generated constructor stub
