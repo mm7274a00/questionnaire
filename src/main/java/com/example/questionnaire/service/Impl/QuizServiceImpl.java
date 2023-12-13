@@ -19,8 +19,10 @@ import org.springframework.util.StringUtils;
 import com.example.questionnaire.constants.RtnCode;
 import com.example.questionnaire.entity.Question;
 import com.example.questionnaire.entity.Questionnaire;
+import com.example.questionnaire.entity.User;
 import com.example.questionnaire.respository.QuestionDao;
 import com.example.questionnaire.respository.QuestionnaireDao;
+import com.example.questionnaire.respository.UserDao;
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QnQuVo;
 import com.example.questionnaire.vo.QuestionRes;
@@ -28,6 +30,7 @@ import com.example.questionnaire.vo.QuestionnaireRes;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizVo;
+import com.example.questionnaire.vo.UserRes;
 
 @EnableScheduling
 @Service
@@ -38,6 +41,10 @@ public class QuizServiceImpl implements QuizService{
 
 	@Autowired 
 	private QuestionDao quDao;
+	
+	@Autowired 
+	private UserDao userDao;
+	
 	
 	@Transactional
 	@Override
@@ -304,4 +311,45 @@ public class QuizServiceImpl implements QuizService{
 		List<Questionnaire> qnList = qnDao.findByIdIn(Arrays.asList(qnId));
 		return new QuestionnaireRes(qnList,RtnCode.SUCCESSFUL);
 	}
+	
+//	@Transactional
+//	@Override
+//	public UserRes getAns(String phoneNumber, List<User> userList) {
+//	    // 检查phoneNumber是否为空
+//	    if (phoneNumber == null || phoneNumber.isEmpty()) {
+//	        return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
+//	    }
+//	    // 假设你要保存用户的回答，你可能需要一个 UserAnswerDao（或者替代的 repository）
+//	    List<User> savedUserAnswers = userDao.saveAll(userList);
+//	    return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
+//	}
+	
+	   @Transactional
+	   @Override
+	    public UserRes getAns(String phoneNumber, List<User> userList) {
+	        // 检查phoneNumber是否为空
+	        if (phoneNumber == null || phoneNumber.isEmpty()) {
+	            return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
+	        }
+
+	        // 保存用户的回答
+	        List<User> savedUserAnswers = userDao.saveAll(userList);
+
+	        return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
+	    }
+	   
+	   @Transactional
+	   @Override
+	    public UserRes getAns1(List<User> userList) {
+	        // 检查phoneNumber是否为空
+	        if (userList == null || userList.isEmpty()) {
+	            return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
+	        }
+
+	        // 保存用户的回答
+	        List<User> savedUserAnswers = userDao.saveAll(userList);
+
+	        return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
+	    }
+	
 	}//

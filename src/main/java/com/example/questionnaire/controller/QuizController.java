@@ -2,6 +2,7 @@ package com.example.questionnaire.controller;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.util.StringUtils;
@@ -12,12 +13,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.questionnaire.constants.RtnCode;
+import com.example.questionnaire.entity.User;
 import com.example.questionnaire.service.ifs.QuizService;
 import com.example.questionnaire.vo.QuestionRes;
 import com.example.questionnaire.vo.QuestionnaireRes;
 import com.example.questionnaire.vo.QuizReq;
 import com.example.questionnaire.vo.QuizRes;
 import com.example.questionnaire.vo.QuizSearchReq;
+import com.example.questionnaire.vo.UserRes;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
@@ -82,6 +86,36 @@ public class QuizController {
 	@GetMapping(value = "api/quiz/searchQuestionnaire")
 	public QuestionnaireRes searchQuestionnaire(@RequestParam(value = "qnId") int qnId) {
 	    return service.searchQuestionnaire(qnId);
+	}
+	
+//	@PostMapping(value = "/api/quiz/getAns")
+//	public UserRes getAns(String phoneNumber, @RequestBody List<User> userList) {
+//	    try {
+//	        UserRes userRes = service.getAns(phoneNumber, userList);
+//	        return userRes;
+//	    } catch (Exception e) {
+//	        return new UserRes(phoneNumber,RtnCode.QUESTION_PARAM_ERROR);
+//	    }
+//	}
+	
+	@PostMapping(value = "/api/quiz/getAns")
+	public UserRes getAns(@RequestParam String phoneNumber, @RequestBody List<User> userList) {
+	    try {
+	        UserRes userRes = service.getAns(phoneNumber, userList);
+	        return userRes;
+	    } catch (Exception e) {
+	        return new UserRes(phoneNumber, RtnCode.QUESTION_PARAM_ERROR);
+	    }
+	}
+	
+	@PostMapping(value = "/api/quiz/getAns1")
+	public UserRes getAns1(@RequestBody List<User> userList) {
+	    try {
+	        UserRes userRes = service.getAns1(userList);
+	        return userRes;
+	    } catch (Exception e) {
+	        return new UserRes(userList, RtnCode.QUESTION_PARAM_ERROR);
+	    }
 	}
 
 }//

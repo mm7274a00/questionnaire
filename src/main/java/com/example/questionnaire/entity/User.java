@@ -12,29 +12,29 @@ import javax.persistence.Table;
 public class User {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Id
-	@Column
+	@Column(name = "num")
 	private int num;
 	
-	@Column
+	@Column(name = "name")
 	private String name;
 	
-	@Column
+	@Id
+	@Column(name = "phone_number")
 	private String phoneNumber;
 	
-	@Column
+	@Column(name = "email")
 	private String email;
 	
-	@Column
+	@Column(name = "age")
 	private String age;
 	
-	@Column
+	@Column(name = "qn_id")
 	private int qnId;
 	
-	@Column
+	@Column(name = "q_id")
 	private int qId;
 	
-	@Column
+	@Column(name = "ans")
 	private String ans;
 
 	public User() {
