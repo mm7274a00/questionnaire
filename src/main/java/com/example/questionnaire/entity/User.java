@@ -26,7 +26,7 @@ public class User {
 	private String email;
 	
 	@Column(name = "age")
-	private String age;
+	private int age;
 	
 	@Column(name = "qn_id")
 	private int qnId;
@@ -42,7 +42,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(int num, String name, String phoneNumber, String email, String age, int qnId, int qId, String ans) {
+	public User(int num, String name, String phoneNumber, String email, int age, int qnId, int qId, String ans) {
 		super();
 		this.num = num;
 		this.name = name;
@@ -86,11 +86,11 @@ public class User {
 		this.email = email;
 	}
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 

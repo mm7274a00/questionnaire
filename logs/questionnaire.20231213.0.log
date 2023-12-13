@@ -3238,3 +3238,1062 @@ com.example.questionnaire.controller.QuizController#getAns(String, List) mapped.
 14:54:15.038 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
 14:54:15.039 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
 14:54:15.045 WARN  [http-nio-8081-exec-2][DefaultHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1]]
+15:53:05.809 WARN  [http-nio-8081-exec-6][DefaultHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1]]
+15:54:26.405 WARN  [http-nio-8081-exec-5][DefaultHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<com.example.questionnaire.entity.User>` from Object value (token `JsonToken.START_OBJECT`)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1]]
+16:08:41.054 WARN  [http-nio-8081-exec-1][DefaultHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.example.questionnaire.vo.UserRes com.example.questionnaire.controller.QuizController.getAns1(java.util.List<com.example.questionnaire.entity.User>)]
+16:31:16.772 WARN  [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1366, SQLState: HY000
+16:31:16.773 ERROR [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Incorrect integer value: 'dd' for column 'age' at row 1
+16:31:16.780 INFO  [http-nio-8081-exec-8][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+16:38:26.295 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:38:26.399 INFO  [Thread-161][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:38:26.400 INFO  [Thread-161][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:38:26.403 INFO  [Thread-161][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:38:26.410 INFO  [Thread-161][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:38:26.413 INFO  [Thread-161][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:38:26.417 INFO  [Thread-161][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:38:26.426 INFO  [Thread-161][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-44 - Shutdown initiated...
+16:38:26.430 INFO  [Thread-161][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-44 - Shutdown completed.
+16:38:26.639 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:38:26.640 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:38:26.736 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:38:26.751 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+16:38:26.876 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:38:26.877 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:38:26.877 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:38:26.877 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:38:26.908 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:38:26.908 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 267 ms
+16:38:26.921 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-45 - Starting...
+16:38:26.928 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-45 - Start completed.
+16:38:26.932 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:38:26.936 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:38:26.946 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:38:26.947 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:38:26.964 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:38:26.964 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:38:27.072 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:38:27.199 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:38:27.202 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:38:27.204 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:38:27.207 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.588 seconds (JVM running for 15760.46)
+16:38:27.208 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:38:28.651 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:38:28.786 INFO  [Thread-171][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:38:28.787 INFO  [Thread-171][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:38:28.791 INFO  [Thread-171][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:38:28.793 INFO  [Thread-171][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:38:28.795 INFO  [Thread-171][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:38:28.795 INFO  [Thread-171][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-45 - Shutdown initiated...
+16:38:28.797 INFO  [Thread-171][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-45 - Shutdown completed.
+16:38:28.877 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:38:28.877 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:38:28.942 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:38:28.951 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+16:38:29.001 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:38:29.001 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:38:29.001 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:38:29.001 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:38:29.032 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:38:29.033 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 154 ms
+16:38:29.046 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-46 - Starting...
+16:38:29.050 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-46 - Start completed.
+16:38:29.052 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:38:29.055 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:38:29.059 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:38:29.059 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:38:29.067 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:38:29.067 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:38:29.141 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:38:29.211 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:38:29.213 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:38:29.216 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:38:29.218 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.353 seconds (JVM running for 15762.471)
+16:38:29.219 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:39:17.477 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:39:17.479 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+16:39:17.481 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 2 ms
+16:40:55.551 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:40:55.637 INFO  [Thread-175][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:40:55.637 INFO  [Thread-175][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:40:55.638 INFO  [Thread-175][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:40:55.643 INFO  [Thread-175][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:40:55.645 INFO  [Thread-175][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:40:55.646 INFO  [Thread-175][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:40:55.647 INFO  [Thread-175][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-46 - Shutdown initiated...
+16:40:55.650 INFO  [Thread-175][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-46 - Shutdown completed.
+16:40:55.742 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:40:55.742 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:40:55.823 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:40:55.831 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+16:40:55.875 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:40:55.875 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:40:55.876 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:40:55.876 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:40:55.908 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:40:55.909 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 165 ms
+16:40:55.920 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-47 - Starting...
+16:40:55.925 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-47 - Start completed.
+16:40:55.929 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:40:55.932 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:40:55.939 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:40:55.939 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:40:55.948 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:40:55.948 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:40:56.025 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:40:56.093 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:40:56.094 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:40:56.096 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:40:56.098 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.371 seconds (JVM running for 15909.351)
+16:40:56.099 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:41:20.808 INFO  [http-nio-8081-exec-2][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:41:20.808 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+16:41:20.815 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 7 ms
+16:50:39.865 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:50:39.958 INFO  [Thread-179][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:50:39.958 INFO  [Thread-179][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:50:39.959 INFO  [Thread-179][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+16:50:39.965 INFO  [Thread-179][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:50:39.967 INFO  [Thread-179][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:50:39.968 INFO  [Thread-179][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:50:39.969 INFO  [Thread-179][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-47 - Shutdown initiated...
+16:50:39.971 INFO  [Thread-179][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-47 - Shutdown completed.
+16:50:40.061 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:50:40.061 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:50:40.134 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:50:40.145 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+16:50:40.188 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:50:40.188 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:50:40.188 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:50:40.188 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:50:40.198 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:50:40.199 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 136 ms
+16:50:40.233 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-48 - Starting...
+16:50:40.237 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-48 - Start completed.
+16:50:40.241 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:50:40.243 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:50:40.252 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:50:40.252 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:50:40.258 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:50:40.259 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:50:40.353 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:50:40.405 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:50:40.407 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:50:40.411 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:50:40.414 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.37 seconds (JVM running for 16493.667)
+16:50:40.415 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:50:51.111 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:50:51.208 INFO  [Thread-183][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:50:51.208 INFO  [Thread-183][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:50:51.214 INFO  [Thread-183][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:50:51.216 INFO  [Thread-183][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:50:51.217 INFO  [Thread-183][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:50:51.217 INFO  [Thread-183][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-48 - Shutdown initiated...
+16:50:51.218 INFO  [Thread-183][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-48 - Shutdown completed.
+16:50:51.295 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:50:51.296 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:50:51.356 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:50:51.364 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+16:50:51.412 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:50:51.413 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:50:51.413 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:50:51.413 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:50:51.449 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:50:51.449 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 152 ms
+16:50:51.459 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-49 - Starting...
+16:50:51.462 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-49 - Start completed.
+16:50:51.467 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:50:51.471 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:50:51.477 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:50:51.477 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:50:51.484 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:50:51.485 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:50:51.559 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:50:51.614 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:50:51.617 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:50:51.619 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:50:51.622 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.336 seconds (JVM running for 16504.875)
+16:50:51.623 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:50:55.119 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:50:55.217 INFO  [Thread-187][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:50:55.217 INFO  [Thread-187][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:50:55.220 INFO  [Thread-187][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:50:55.222 INFO  [Thread-187][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:50:55.223 INFO  [Thread-187][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:50:55.224 INFO  [Thread-187][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-49 - Shutdown initiated...
+16:50:55.226 INFO  [Thread-187][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-49 - Shutdown completed.
+16:50:55.314 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:50:55.314 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:50:55.384 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:50:55.396 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+16:50:55.438 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:50:55.438 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:50:55.439 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:50:55.439 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:50:55.469 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:50:55.469 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 154 ms
+16:50:55.479 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-50 - Starting...
+16:50:55.483 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-50 - Start completed.
+16:50:55.485 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:50:55.487 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:50:55.491 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:50:55.492 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:50:55.502 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:50:55.502 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:50:55.595 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:50:55.663 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:50:55.666 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:50:55.668 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:50:55.671 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.368 seconds (JVM running for 16508.924)
+16:50:55.672 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:51:00.166 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:51:00.251 INFO  [Thread-191][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:51:00.251 INFO  [Thread-191][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:51:00.255 INFO  [Thread-191][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:51:00.256 INFO  [Thread-191][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:51:00.257 INFO  [Thread-191][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:51:00.258 INFO  [Thread-191][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-50 - Shutdown initiated...
+16:51:00.261 INFO  [Thread-191][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-50 - Shutdown completed.
+16:51:00.358 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:51:00.359 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:51:00.429 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:51:00.440 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+16:51:00.492 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:51:00.493 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:51:00.493 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:51:00.493 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:51:00.526 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:51:00.526 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 166 ms
+16:51:00.537 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-51 - Starting...
+16:51:00.541 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-51 - Start completed.
+16:51:00.545 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:51:00.550 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:51:00.556 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:51:00.556 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:51:00.570 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:51:00.571 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:51:00.674 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:51:00.732 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:51:00.734 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:51:00.735 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:51:00.737 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.398 seconds (JVM running for 16513.99)
+16:51:00.737 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:51:03.211 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+16:51:03.299 INFO  [Thread-195][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+16:51:03.299 INFO  [Thread-195][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+16:51:03.302 INFO  [Thread-195][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+16:51:03.303 INFO  [Thread-195][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+16:51:03.304 INFO  [Thread-195][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+16:51:03.305 INFO  [Thread-195][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-51 - Shutdown initiated...
+16:51:03.307 INFO  [Thread-195][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-51 - Shutdown completed.
+16:51:03.403 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+16:51:03.404 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+16:51:03.464 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:51:03.471 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+16:51:03.510 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+16:51:03.510 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+16:51:03.510 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+16:51:03.510 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:51:03.543 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+16:51:03.543 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 137 ms
+16:51:03.556 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-52 - Starting...
+16:51:03.559 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-52 - Start completed.
+16:51:03.562 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+16:51:03.564 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:51:03.572 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+16:51:03.572 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+16:51:03.581 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:51:03.582 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:51:03.673 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:51:03.735 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+16:51:03.737 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+16:51:03.739 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+16:51:03.758 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.366 seconds (JVM running for 16517.012)
+16:51:03.759 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+16:51:16.141 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:51:16.143 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+16:51:16.145 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 2 ms
+17:00:19.107 WARN  [http-nio-8081-exec-6][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:00:19.108 ERROR [http-nio-8081-exec-6][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:00:19.108 INFO  [http-nio-8081-exec-6][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:00:55.624 WARN  [http-nio-8081-exec-7][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:00:55.625 ERROR [http-nio-8081-exec-7][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:00:55.625 INFO  [http-nio-8081-exec-7][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:01:21.308 WARN  [http-nio-8081-exec-9][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:01:21.309 ERROR [http-nio-8081-exec-9][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:01:21.309 INFO  [http-nio-8081-exec-9][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:02:04.834 WARN  [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:02:04.836 ERROR [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:02:04.836 INFO  [http-nio-8081-exec-2][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:02:24.060 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+17:02:24.146 INFO  [Thread-199][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+17:02:24.146 INFO  [Thread-199][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:02:24.147 INFO  [Thread-199][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+17:02:24.150 INFO  [Thread-199][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+17:02:24.151 INFO  [Thread-199][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+17:02:24.153 INFO  [Thread-199][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+17:02:24.153 INFO  [Thread-199][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-52 - Shutdown initiated...
+17:02:24.155 INFO  [Thread-199][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-52 - Shutdown completed.
+17:02:24.256 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8188 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:02:24.256 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:02:24.336 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:02:24.343 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+17:02:24.393 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:02:24.393 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:02:24.393 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:02:24.394 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:02:24.410 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:02:24.411 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 154 ms
+17:02:24.438 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-53 - Starting...
+17:02:24.443 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-53 - Start completed.
+17:02:24.448 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:02:24.453 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:02:24.457 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:02:24.457 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:02:24.463 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:02:24.463 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:02:24.538 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:02:24.584 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:02:24.586 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:02:24.588 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:02:24.590 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.352 seconds (JVM running for 17197.843)
+17:02:24.591 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+17:02:24.792 INFO  [http-nio-8081-exec-2][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:02:24.794 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:02:24.795 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+17:02:24.814 WARN  [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1054, SQLState: 42S22
+17:02:24.814 ERROR [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Unknown column 'user0_.num' in 'field list'
+17:02:24.815 INFO  [http-nio-8081-exec-2][DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:116)] HHH000327: Error performing load command
+org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2322)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2075)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:327)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2440)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:77)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:61)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:4550)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:4540)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:571)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:539)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:208)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:327)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:108)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1220)
+	at org.hibernate.internal.SessionImpl.access$2100(SessionImpl.java:202)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.doLoad(SessionImpl.java:2848)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.lambda$load$1(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.perform(SessionImpl.java:2781)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024)
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:308)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:175)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:829)
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:816)
+	at jdk.internal.reflect.GeneratedMethodAccessor299.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at com.sun.proxy.$Proxy432.merge(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor299.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:315)
+	at com.sun.proxy.$Proxy432.merge(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:669)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:700)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy436.saveAll(Unknown Source)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl.getAns1(QuizServiceImpl.java:350)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl$$FastClassBySpringCGLIB$$7af59fa7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl$$EnhancerBySpringCGLIB$$5f472ad7.getAns1(<generated>)
+	at com.example.questionnaire.controller.QuizController.getAns1(QuizController.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'user0_.num' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	... 137 common frames omitted
+17:02:30.630 WARN  [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1054, SQLState: 42S22
+17:02:30.631 ERROR [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Unknown column 'user0_.num' in 'field list'
+17:02:30.632 INFO  [http-nio-8081-exec-1][DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:116)] HHH000327: Error performing load command
+org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2322)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2075)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:327)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2440)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:77)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:61)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:4550)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:4540)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:571)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:539)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:208)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:327)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:108)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1220)
+	at org.hibernate.internal.SessionImpl.access$2100(SessionImpl.java:202)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.doLoad(SessionImpl.java:2848)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.lambda$load$1(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.perform(SessionImpl.java:2781)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024)
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:308)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:175)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:829)
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:816)
+	at jdk.internal.reflect.GeneratedMethodAccessor299.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at com.sun.proxy.$Proxy432.merge(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor299.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:315)
+	at com.sun.proxy.$Proxy432.merge(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:669)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:700)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy436.saveAll(Unknown Source)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl.getAns1(QuizServiceImpl.java:350)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl$$FastClassBySpringCGLIB$$7af59fa7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.example.questionnaire.service.Impl.QuizServiceImpl$$EnhancerBySpringCGLIB$$5f472ad7.getAns1(<generated>)
+	at com.example.questionnaire.controller.QuizController.getAns1(QuizController.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'user0_.num' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	... 137 common frames omitted
+17:03:07.193 WARN  [http-nio-8081-exec-5][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:03:07.194 ERROR [http-nio-8081-exec-5][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:03:07.195 INFO  [http-nio-8081-exec-5][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:03:35.917 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 8348 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:03:35.921 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:03:35.971 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:03:35.971 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:03:36.678 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:03:36.739 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+17:03:37.708 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:03:37.722 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:03:37.725 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:03:37.725 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:03:37.810 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:03:37.811 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 1839 ms
+17:03:38.013 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+17:03:38.152 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+17:03:38.208 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:03:38.305 INFO  [restartedMain][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+17:03:38.507 INFO  [restartedMain][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:03:38.652 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:03:38.901 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:03:38.901 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:03:39.167 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:03:39.180 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:03:39.942 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:03:40.332 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:03:40.348 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:03:40.387 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:03:40.397 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 4.836 seconds (JVM running for 5.478)
+17:03:46.307 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:03:46.308 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:03:46.310 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+17:03:46.509 WARN  [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:03:46.510 ERROR [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '22' for key 'user.email_UNIQUE'
+17:03:46.511 INFO  [http-nio-8081-exec-1][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:07:06.468 WARN  [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:07:06.469 ERROR [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:07:06.469 INFO  [http-nio-8081-exec-8][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:08:00.167 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15756 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:08:00.169 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:08:00.227 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:08:00.229 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:08:00.876 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:08:00.948 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+17:08:01.843 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:08:01.855 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:08:01.858 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:08:01.858 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:08:01.963 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:08:01.964 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 1735 ms
+17:08:02.153 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+17:08:02.349 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+17:08:02.400 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:08:02.497 INFO  [restartedMain][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+17:08:02.706 INFO  [restartedMain][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:08:02.871 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:08:03.109 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:08:03.109 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:08:03.378 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:08:03.384 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:08:04.104 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:08:04.507 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:08:04.520 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:08:04.544 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:08:04.560 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 4.761 seconds (JVM running for 5.397)
+17:08:12.454 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:08:12.456 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:08:12.458 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+17:08:12.676 WARN  [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:08:12.676 ERROR [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:08:12.677 INFO  [http-nio-8081-exec-1][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:09:30.471 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:09:30.475 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:09:30.525 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:09:30.526 INFO  [restartedMain][DevToolsPropertyDefaultsPostProcessor.logTo(DeferredLog.java:255)] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:09:31.155 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:09:31.234 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+17:09:32.293 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:09:32.308 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:09:32.311 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:09:32.311 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:09:32.410 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:09:32.410 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 1881 ms
+17:09:32.647 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+17:09:32.868 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+17:09:32.945 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:09:33.057 INFO  [restartedMain][Version.logVersion(Version.java:44)] HHH000412: Hibernate ORM core version 5.6.15.Final
+17:09:33.222 INFO  [restartedMain][Version.<clinit>(JavaReflectionManager.java:56)] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:09:33.385 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:09:33.735 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:09:33.736 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:09:34.021 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:09:34.030 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:09:34.912 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:09:35.337 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:09:35.352 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:09:35.386 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:09:35.402 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 5.31 seconds (JVM running for 5.941)
+17:09:36.651 INFO  [http-nio-8081-exec-2][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:09:36.652 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:09:36.653 INFO  [http-nio-8081-exec-2][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+17:09:53.886 WARN  [http-nio-8081-exec-3][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:09:53.887 ERROR [http-nio-8081-exec-3][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:09:53.890 INFO  [http-nio-8081-exec-3][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:12:26.014 WARN  [http-nio-8081-exec-6][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:12:26.016 ERROR [http-nio-8081-exec-6][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:12:26.017 INFO  [http-nio-8081-exec-6][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:13:20.990 WARN  [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:13:20.991 ERROR [http-nio-8081-exec-8][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:13:20.993 INFO  [http-nio-8081-exec-8][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:15:57.216 WARN  [http-nio-8081-exec-10][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:15:57.217 ERROR [http-nio-8081-exec-10][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:15:57.218 INFO  [http-nio-8081-exec-10][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:16:21.980 WARN  [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:16:21.981 ERROR [http-nio-8081-exec-2][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:16:21.981 INFO  [http-nio-8081-exec-2][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:16:40.737 WARN  [http-nio-8081-exec-4][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:16:40.738 ERROR [http-nio-8081-exec-4][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:16:40.740 INFO  [http-nio-8081-exec-4][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
+17:17:40.821 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+17:17:40.908 INFO  [Thread-5][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+17:17:40.909 INFO  [Thread-5][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:17:40.912 INFO  [Thread-5][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+17:17:40.916 INFO  [Thread-5][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+17:17:40.920 INFO  [Thread-5][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+17:17:40.928 INFO  [Thread-5][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+17:17:40.934 INFO  [Thread-5][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-1 - Shutdown initiated...
+17:17:40.952 INFO  [Thread-5][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-1 - Shutdown completed.
+17:17:41.050 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:17:41.051 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:17:41.240 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:17:41.260 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+17:17:41.393 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:17:41.394 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:17:41.394 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:17:41.394 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:17:41.421 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:17:41.422 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 370 ms
+17:17:41.468 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-2 - Starting...
+17:17:41.474 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-2 - Start completed.
+17:17:41.480 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:17:41.487 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:17:41.495 WARN  [restartedMain][AnnotationConfigServletWebServerApplicationContext.refresh(AbstractApplicationContext.java:591)] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+17:17:41.495 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-2 - Shutdown initiated...
+17:17:41.497 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-2 - Shutdown completed.
+17:17:41.497 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:17:41.504 INFO  [restartedMain][ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:17:41.528 ERROR [restartedMain][SpringApplication.reportFailure(SpringApplication.java:818)] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.questionnaire.QuestionnaireApplication.main(QuestionnaireApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: LInt;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredFieldProperties(JavaXClass.java:84)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:113)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:108)
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:258)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:772)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Int
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 42 common frames omitted
+17:17:53.300 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:17:53.300 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:17:53.451 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:17:53.467 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+17:17:53.545 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:17:53.546 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:17:53.546 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:17:53.547 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:17:53.572 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:17:53.572 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 267 ms
+17:17:53.592 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-3 - Starting...
+17:17:53.597 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-3 - Start completed.
+17:17:53.603 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:17:53.608 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:17:53.613 WARN  [restartedMain][AnnotationConfigServletWebServerApplicationContext.refresh(AbstractApplicationContext.java:591)] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+17:17:53.614 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-3 - Shutdown initiated...
+17:17:53.615 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-3 - Shutdown completed.
+17:17:53.616 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:17:53.621 INFO  [restartedMain][ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:17:53.623 ERROR [restartedMain][SpringApplication.reportFailure(SpringApplication.java:818)] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.questionnaire.QuestionnaireApplication.main(QuestionnaireApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: LInt;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredFieldProperties(JavaXClass.java:84)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:113)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:108)
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:258)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:772)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Int
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 42 common frames omitted
+17:18:10.522 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:18:10.523 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:18:10.657 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:18:10.672 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+17:18:10.743 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:18:10.744 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:18:10.745 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:18:10.745 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:18:10.771 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:18:10.771 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 246 ms
+17:18:10.802 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-4 - Starting...
+17:18:10.809 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-4 - Start completed.
+17:18:10.815 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:18:10.820 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:18:10.826 WARN  [restartedMain][AnnotationConfigServletWebServerApplicationContext.refresh(AbstractApplicationContext.java:591)] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+17:18:10.826 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-4 - Shutdown initiated...
+17:18:10.828 INFO  [restartedMain][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-4 - Shutdown completed.
+17:18:10.829 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:18:10.834 INFO  [restartedMain][ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:18:10.838 ERROR [restartedMain][SpringApplication.reportFailure(SpringApplication.java:818)] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: LInt;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.questionnaire.QuestionnaireApplication.main(QuestionnaireApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: LInt;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredFieldProperties(JavaXClass.java:84)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:113)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:108)
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:258)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:772)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Int
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 42 common frames omitted
+17:18:17.444 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:18:17.444 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:18:17.540 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:18:17.558 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+17:18:17.627 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:18:17.628 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:18:17.629 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:18:17.629 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:18:17.648 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:18:17.648 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 203 ms
+17:18:17.665 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-5 - Starting...
+17:18:17.671 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-5 - Start completed.
+17:18:17.675 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:18:17.679 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:18:17.688 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:18:17.689 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:18:17.718 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:18:17.718 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:18:17.879 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:18:17.953 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:18:17.957 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:18:17.959 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:18:17.962 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.56 seconds (JVM running for 528.501)
+17:18:17.964 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+17:18:23.965 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:18:23.967 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:18:23.969 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 2 ms
+17:18:23.991 WARN  [http-nio-8081-exec-1][DefaultHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unresolved compilation problem: <EOL>?Type mismatch: cannot convert from String to int<EOL>; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unresolved compilation problem: <EOL>?Type mismatch: cannot convert from String to int<EOL><EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 35] (through reference chain: java.util.ArrayList[0]->com.example.questionnaire.entity.User["age"])]
+17:18:41.948 INFO  [File Watcher][LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent(LocalDevToolsAutoConfiguration.java:211)] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+17:18:42.045 INFO  [Thread-7][Http11NioProtocol.log(DirectJDKLog.java:173)] Pausing ProtocolHandler ["http-nio-8081"]
+17:18:42.047 INFO  [Thread-7][StandardService.log(DirectJDKLog.java:173)] Stopping service [Tomcat]
+17:18:42.048 INFO  [Thread-7][[/].log(DirectJDKLog.java:173)] Destroying Spring FrameworkServlet 'dispatcherServlet'
+17:18:42.052 INFO  [Thread-7][Http11NioProtocol.log(DirectJDKLog.java:173)] Stopping ProtocolHandler ["http-nio-8081"]
+17:18:42.054 INFO  [Thread-7][Http11NioProtocol.log(DirectJDKLog.java:173)] Destroying ProtocolHandler ["http-nio-8081"]
+17:18:42.056 INFO  [Thread-7][LocalContainerEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:651)] Closing JPA EntityManagerFactory for persistence unit 'default'
+17:18:42.057 INFO  [Thread-7][HikariDataSource.close(HikariDataSource.java:350)] HikariPool-5 - Shutdown initiated...
+17:18:42.061 INFO  [Thread-7][HikariDataSource.close(HikariDataSource.java:352)] HikariPool-5 - Shutdown completed.
+17:18:42.128 INFO  [restartedMain][QuestionnaireApplication.logStarting(StartupInfoLogger.java:55)] Starting QuestionnaireApplication using Java 11.0.14.1 on Once-003 with PID 15668 (C:\Users\once-\Desktop\back end\java_project\questionnaire\bin\main started by once- in C:\Users\once-\Desktop\back end\java_project\questionnaire)
+17:18:42.129 INFO  [restartedMain][QuestionnaireApplication.logStartupProfileInfo(SpringApplication.java:632)] No active profile set, falling back to 1 default profile: "default"
+17:18:42.240 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:18:42.258 INFO  [restartedMain][RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+17:18:42.342 INFO  [restartedMain][TomcatWebServer.initialize(TomcatWebServer.java:108)] Tomcat initialized with port(s): 8081 (http)
+17:18:42.343 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8081"]
+17:18:42.343 INFO  [restartedMain][StandardService.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+17:18:42.343 INFO  [restartedMain][StandardEngine.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.82]
+17:18:42.358 INFO  [restartedMain][[/].log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+17:18:42.359 INFO  [restartedMain][ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] Root WebApplicationContext: initialization completed in 229 ms
+17:18:42.379 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-6 - Starting...
+17:18:42.383 INFO  [restartedMain][HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-6 - Start completed.
+17:18:42.388 INFO  [restartedMain][LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] HHH000204: Processing PersistenceUnitInfo [name: default]
+17:18:42.394 INFO  [restartedMain][Dialect.<init>(Dialect.java:175)] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:18:42.407 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:287)] HHH000038: Composite-id class does not override equals(): com.example.questionnaire.entity.QuestionId
+17:18:42.408 WARN  [restartedMain][RootClass.checkCompositeIdentifier(RootClass.java:290)] HHH000039: Composite-id class does not override hashCode(): com.example.questionnaire.entity.QuestionId
+17:18:42.434 INFO  [restartedMain][JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:18:42.435 INFO  [restartedMain][LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:18:42.588 WARN  [restartedMain][JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:223)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:18:42.664 INFO  [restartedMain][OptionalLiveReloadServer.startServer(OptionalLiveReloadServer.java:59)] LiveReload server is running on port 35729
+17:18:42.669 INFO  [restartedMain][Http11NioProtocol.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8081"]
+17:18:42.672 INFO  [restartedMain][TomcatWebServer.start(TomcatWebServer.java:220)] Tomcat started on port(s): 8081 (http) with context path ''
+17:18:42.675 INFO  [restartedMain][QuestionnaireApplication.logStarted(StartupInfoLogger.java:61)] Started QuestionnaireApplication in 0.565 seconds (JVM running for 553.214)
+17:18:42.677 INFO  [restartedMain][ConditionEvaluationDeltaLoggingListener.onApplicationEvent(ConditionEvaluationDeltaLoggingListener.java:63)] Condition evaluation unchanged
+17:18:44.721 INFO  [http-nio-8081-exec-1][[/].log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:18:44.722 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+17:18:44.723 INFO  [http-nio-8081-exec-1][DispatcherServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 1 ms
+17:18:44.778 WARN  [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:137)] SQL Error: 1062, SQLState: 23000
+17:18:44.779 ERROR [http-nio-8081-exec-1][SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:142)] Duplicate entry '33' for key 'user.email_UNIQUE'
+17:18:44.779 INFO  [http-nio-8081-exec-1][AbstractBatchImpl.release(AbstractBatchImpl.java:213)] HHH000010: On release of batch it still contained JDBC statements
