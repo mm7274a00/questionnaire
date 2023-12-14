@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
+@IdClass(value = UserId.class)
 public class User {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +30,7 @@ public class User {
 	@Column(name = "age")
 	private int age;
 	
+	@Id
 	@Column(name = "qn_id")
 	private int qnId;
 	

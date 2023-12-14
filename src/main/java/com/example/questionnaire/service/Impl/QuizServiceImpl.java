@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -15,6 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.questionnaire.constants.RtnCode;
 import com.example.questionnaire.entity.Question;
@@ -338,18 +340,38 @@ public class QuizServiceImpl implements QuizService{
 	        return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
 	    }
 	   
+//	   @Transactional
+//	   @Override
+//	    public UserRes getAns1(@RequestBody List<User> userList) {
+//	        // 检查phoneNumber是否为空
+//	        if (userList == null || userList.isEmpty()) {
+//	            return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
+//	        }
+//
+//	        // 保存用户的回答
+//	        List<User> savedUserAnswers = userDao.saveAll(userList);	
+//
+//	        return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
+//	    }
+	   
 	   @Transactional
 	   @Override
-	    public UserRes getAns1(List<User> userList) {
-	        // 检查phoneNumber是否为空
-	        if (userList == null || userList.isEmpty()) {
-	            return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
-	        }
+	   public UserRes getAns1(@RequestBody List<User> userList) {
+	       // 检查phoneNumber是否为空
+	       if (userList == null || userList.isEmpty()) {
+	           return new UserRes(userList, RtnCode.PHONENUMBER_ERROR1);
+	       }
 
-	        // 保存用户的回答
-	        List<User> savedUserAnswers = userDao.saveAll(userList);
+	       // 遍历用户列表，逐个保存用户的回答
+	       List<User> savedUserAnswers = new ArrayList<>();
+	       for (User user : userList) {
+	           User savedUser = userDao.save(user);
+	           savedUserAnswers.add(savedUser);
+	       }
 
-	        return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
-	    }
+	       return new UserRes(savedUserAnswers, RtnCode.SUCCESSFUL);
+	   }
+
+
 	
 	}//
